@@ -3,8 +3,9 @@ import Button from "@material-ui/core/Button";
 
 interface ButtonProps {
   label: string;
+  className: string;
   onClick: () => void;
-  variant: "contained" | "outlined";
+  variant: "contained" | "outlined" | "text";
 }
 
 interface ButtonState {
@@ -22,11 +23,12 @@ export const CustomButton: React.FunctionComponent<ButtonProps> = (props) => {
     setState({ hover: false });
   };
 
-  const { label, onClick, variant } = props;
+  const { label, className, onClick, variant } = props;
   const { hover } = state;
 
   return (
     <Button
+      className={className}
       variant={variant}
       onClick={onClick}
       onMouseEnter={handleMouseEnter}
