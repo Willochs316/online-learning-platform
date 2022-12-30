@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Button from '@mui/material/Button';
 import Login from './components/Login';
+import { CommonText } from './common/CustomText';
 // import './App.css'
 
 function App() {
