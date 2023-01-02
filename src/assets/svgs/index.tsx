@@ -1,7 +1,7 @@
-import UdemyLogo from "./logo-udemy.svg";
+import CartIcon from '../../assets/svgs/cart.svg'
 
 const Svgs = {
-  UdemyLogo,
+  CartIcon,
 };
 
 export default Svgs;
