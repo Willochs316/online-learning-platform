@@ -88,7 +88,14 @@ export const Header: React.FunctionComponent<headerProps> = (props) => {
 
         <CartContent>
           <CartAnchor>
-            <ShoppingCartOutlinedIcon style={{ color: "#1c1d1f" }} />
+            <ShoppingCartOutlinedIcon
+              sx={{
+                color: "#1c1d1f",
+                ":hover": {
+                  color: "#5623D0",
+                },
+              }}
+            />
           </CartAnchor>
         </CartContent>
 
