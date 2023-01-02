@@ -109,7 +109,7 @@ export const HeaderFormField = styled("div")({
   borderRadius: "9999px",
   backgroundColor: "#f7f9fa",
   margin: "0 12px",
-  // maxWidth: 656.73,
+  width: "45.606%",
 });
 
 export const Form = styled("form")({
@@ -124,8 +124,7 @@ export const Form = styled("form")({
   height: "100%",
   padding: "0 24px 0 0",
   flexDirection: "row-reverse",
-  // maxWidth: 654.73,
-  width: "100%",
+  width: "98.93208%",
   position: "relative",
 });
 
@@ -143,7 +142,6 @@ export const FormInputField = styled("input")({
   flex: 1,
   padding: "0 0 0 4px",
   backgroundColor: "transparent",
-  // maxWidth: 582.73,
   outline: 0,
 });
 
@@ -153,7 +151,7 @@ export const InputSearchButton = styled("button")({
   alignItems: "center",
   margin: 0,
   fontWeight: 700,
-  // lineHeight: 1.2,
+  lineHeight: 1.2,
   letterSpacing: "0.32px",
   fontSize: "16px",
   position: "relative",
@@ -299,8 +297,8 @@ export const HeaderButton = styled("div")({
   margin: 0,
   padding: 0,
   marginLeft: 8,
-  width: 80,
-  // width: "5.7475%",
+  maxWidth: 80,
+  width: "5.7475%",
   height: 40,
 });
 
