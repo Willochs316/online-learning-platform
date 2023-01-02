@@ -5,7 +5,7 @@ interface ButtonProps {
   label: string;
   className: string;
   onClick: () => void;
-  variant: "contained" | "outlined" | 'text';
+  variant: "contained" | "outlined" | "text";
 }
 
 interface ButtonState {
@@ -33,7 +33,6 @@ export const CustomButton: React.FunctionComponent<ButtonProps> = (props) => {
       onClick={onClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      // style={{ backgroundColor: hover ? "red" : "blue" }}
     >
       {label}
     </Button>
