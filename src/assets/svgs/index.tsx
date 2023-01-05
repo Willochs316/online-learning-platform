@@ -1,7 +1,7 @@
-import CartIcon from '../../assets/svgs/cart.svg'
+import { ReactComponent as FirstRating } from './firstRating.svg'
 
 const Svgs = {
-  CartIcon,
+  FirstRating,
 };
 
 export default Svgs;
