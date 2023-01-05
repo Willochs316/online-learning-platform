@@ -30,7 +30,7 @@ export const HomePageContainer = styled("main")({
   padding: 0,
 });
 
-export const HomePageCarousel = styled("div")({
+export const HomePageTopCarousel = styled("div")({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -44,10 +44,10 @@ export const HomePageCarousel = styled("div")({
   //   minWidth: "600px",
   width: "100%",
   height: 448,
-  backgroundColor: "blue",
+  backgroundColor: "#f0f0ff",
 });
 
-export const CarouselContainer = styled("div")({
+export const TopCarouselContainer = styled("div")({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -77,7 +77,7 @@ export const CarouselItems = styled("div")({
   overflowX: "hidden",
 });
 
-export const HomeComponentContainer = styled("div")({
+export const HomeMainComponentContainer = styled("div")({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
@@ -97,7 +97,6 @@ export const HomeComponentContainer = styled("div")({
   paddingTop: 0,
   flexGrow: 1,
   cursor: "pointer",
-  //   backgroundColor: "green",
 });
 
 export const HomeComponentMargin = styled("div")({
@@ -115,7 +114,7 @@ export const HomeComponentMargin = styled("div")({
   padding: 0,
 });
 
-export const HomeHeaderText = styled("h2")({
+export const HomeMainHeaderText = styled("h2")({
   display: "flex",
   alignItems: "center",
   color: "#1c1d1f",
@@ -147,7 +146,7 @@ export const ComponentMargin = styled("div")({
   width: "100%",
 });
 
-export const HomeUnitTitleContainer = styled("div")({
+export const HomeMainUnitTitleContainer = styled("div")({
   display: "flex",
   alignItems: "center",
   justifyContent: "flex-start",
@@ -161,7 +160,7 @@ export const HomeUnitTitleContainer = styled("div")({
   width: "100%",
 });
 
-export const HomeUnitTitleContent = styled("div")({
+export const HomeMainUnitTitleContent = styled("div")({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "baseline",
@@ -174,7 +173,7 @@ export const HomeUnitTitleContent = styled("div")({
   padding: 0,
 });
 
-export const HomeUnitTitle = styled("div")({
+export const HomeMainUnitTitle = styled("div")({
   display: "flex",
   flexDirection: "column",
   alignItems: "baseline",
@@ -204,7 +203,7 @@ export const HomeUnitAnchor = styled("a")({
   cursor: "pointer",
 });
 
-export const Span = styled("span")({
+export const Span = styled("div")({
   display: "inline-block",
 });
 
@@ -223,6 +222,7 @@ export const MainCarouselContainer = styled("div")({
   position: "relative",
   width: "100%",
   height: 290.52,
+  backgroundColor: "#f0f0ff",
 });
 
 export const CourseUnitCard = styled("div")({
@@ -247,8 +247,6 @@ export const CourseUnitCard = styled("div")({
   touchAction: "manipulation",
   overflowX: "hidden",
   position: "relative",
-  backgroundColor: "wheat",
-  zIndex: -1,
 });
 
 export const CarouselButton = styled("button")({
@@ -349,24 +347,8 @@ export const ImageContainer = styled("div")({
   padding: 0,
   backgroundColor: "#1c1d1f",
   border: "1px solid #d1d7dc",
-  // overflow: "hidden",
+  overflow: "hidden",
   position: "relative",
-  // paddingBottom: "56.25%",
-  width: 245.59,
-  // height: 138.14,
-});
-
-export const Image = styled("img")({
-  color: "#1c1d1f",
-  aspectRatio: "auto 240 / 135",
-  margin: 0,
-  padding: 0,
-  // maxWidth: "100%",
-  display: "flex",
-
-  transition: "opacity linear 100ms",
-  // position: "absolute",
-  // top: 0,
   width: 245.59,
   height: 138.14,
 });
@@ -434,17 +416,6 @@ export const CourseHeaderContent = styled("div")({
   width: "100%",
 });
 
-export const CourseHeaderText = styled("p")({
-  fontSize: "16px",
-});
-
-export const CourseEllipsisText = styled("p")({
-  whiteSpace: "nowrap",
-  overflow: "hidden",
-  textOverflow: "ellipsis",
-  width: "80%",
-});
-
 export const AuthorContainer = styled("div")({
   display: "flex",
   alignItems: "center",
@@ -458,19 +429,6 @@ export const AuthorContainer = styled("div")({
   lineHeight: 1.4,
   fontSize: "12px",
   marginBottom: "4px",
-});
-
-export const AuthorTitle = styled("p")({
-  fontWeight: 400,
-  lineHeight: 1.4,
-  fontSize: "12px",
-  margin: 0,
-  padding: 0,
-  display: "flex",
-  overflow: "hidden",
-  textOverflow: "ellipsis",
-  whiteSpace: "normal",
-  color: "#6a6f73",
 });
 
 export const CourseCardRate = styled("div")({
@@ -501,33 +459,6 @@ export const StarRatingContainer = styled("span")({
   width: 94.56,
 });
 
-export const StarHeadingNumber = styled("span")({
-  margin: 0,
-  padding: 0,
-  fontWeight: 700,
-  lineHeight: 1.2,
-  letterSpacing: "-.2px",
-  fontSize: "14px",
-  marginRight: "4px",
-  color: "#b4690e",
-});
-
-export const Logo = styled("img")({
-  width: 70,
-  height: 16,
-});
-
-export const Reviews = styled("span")({
-  whiteSpace: "nowrap",
-  margin: 0,
-  padding: 0,
-  fontWeight: 400,
-  lineHeight: 1.4,
-  fontSize: "12px",
-  color: "#6a6f73",
-  marginLeft: "4px",
-});
-
 export const PriceTextContainer = styled("div")({
   display: "flex",
   alignItems: "center",
@@ -550,7 +481,6 @@ export const CurrentPriceContainer = styled("div")({
   display: "flex",
   alignItems: "center",
   justifyContent: "flex-start",
-  // width: "100%",
   color: "#1c1d1f",
   margin: 0,
   fontFamily:
@@ -562,17 +492,6 @@ export const CurrentPriceContainer = styled("div")({
   padding: "4px 0",
   marginRight: "8px",
   whiteSpace: "nowrap",
-});
-
-export const CurrentPriceText = styled("span")({
-  color: "#1c1d1f",
-  fontWeight: 700,
-  letterSpacing: "-.2px",
-  fontSize: "16px",
-  lineHeight: 1,
-  whiteSpace: "nowrap",
-  margin: 0,
-  padding: 0,
 });
 
 export const OriginalPriceContainer = styled("div")({
@@ -612,18 +531,4 @@ export const CourseBadgeContainer = styled("div")({
   margin: "8px 0 4px",
   gap: "4px 8px",
   width: "100%",
-});
-
-export const CourseBadge = styled("div")({
-  margin: 0,
-  fontWeight: 700,
-  lineHeight: 1.2,
-  letterSpacing: "-.2px",
-  fontSize: "12px",
-  display: "flex",
-  alignItems: "center",
-  padding: "4px 8px",
-  whiteSpace: "nowrap",
-  backgroundColor: "#eceb98",
-  color: "#3d3c0a",
 });

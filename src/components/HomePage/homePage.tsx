@@ -1,75 +1,69 @@
 import * as React from "react";
+import "./homePage.css";
 import {
   CarouselButton,
-  CarouselContainer,
+  TopCarouselContainer,
   CarouselItems,
   CarouselScrollItem,
   CarouselSecondButton,
   ComponentMargin,
   CourseCard,
   CourseHeaderContent,
-  CourseHeaderText,
   CourseTitleAnchor,
   CourseTitleUrl,
   CourseUnitCard,
-  CourseEllipsisText,
-  HomeComponentContainer,
+  HomeMainComponentContainer,
   HomeComponentMargin,
-  HomeHeaderText,
-  HomePageCarousel,
+  HomeMainHeaderText,
+  HomePageTopCarousel,
   HomePageContainer,
   HomeUnitAnchor,
-  HomeUnitTitle,
-  HomeUnitTitleContainer,
-  HomeUnitTitleContent,
-  Image,
+  HomeMainUnitTitle,
+  HomeMainUnitTitleContainer,
+  HomeMainUnitTitleContent,
   ImageContainer,
   MainCarouselContainer,
   ScrollItemContainer,
   Span,
   StyledHomeMainContent,
   AuthorContainer,
-  AuthorTitle,
   CourseCardRate,
   StarRatingContainer,
-  StarHeadingNumber,
-  Logo,
-  Reviews,
   PriceTextContainer,
   CurrentPriceContainer,
-  CurrentPriceText,
   OriginalPriceContainer,
   OriginalPriceText,
   CourseBadgeContainer,
-  CourseBadge,
 } from "./homePage.styled";
 import ArrowBackIosNewOutlinedIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 import WebRtc from "../../assets/images/web-rtc.jpeg";
 import GradeIcon from "@mui/icons-material/Grade";
 import StarHalfIcon from "@mui/icons-material/StarHalf";
+import { CommonText } from "../../common/CustomText";
+import { Image } from "../../common/Image";
 
-interface headerProps {}
+interface homeProps {}
 
-export const HomePage: React.FunctionComponent<headerProps> = (props) => {
+export const HomePage: React.FunctionComponent<homeProps> = (props) => {
   return (
     <StyledHomeMainContent>
       <HomePageContainer>
-        <HomePageCarousel>
-          <CarouselContainer>
+        <HomePageTopCarousel>
+          <TopCarouselContainer>
             <CarouselItems></CarouselItems>
-          </CarouselContainer>
-        </HomePageCarousel>
+          </TopCarouselContainer>
+        </HomePageTopCarousel>
 
-        <HomeComponentContainer>
+        <HomeMainComponentContainer>
           <HomeComponentMargin>
-            <HomeHeaderText>What to learn next</HomeHeaderText>
+            <HomeMainHeaderText>What to learn next</HomeMainHeaderText>
 
             <ComponentMargin>
-              <HomeUnitTitleContainer>
-                <HomeUnitTitleContent>
-                  <HomeUnitTitle>
-                    <p>
+              <HomeMainUnitTitleContainer>
+                <HomeMainUnitTitleContent>
+                  <HomeMainUnitTitle>
+                    <div>
                       Because you viewed "
                       <HomeUnitAnchor>
                         <Span
@@ -79,12 +73,17 @@ export const HomePage: React.FunctionComponent<headerProps> = (props) => {
                             },
                           }}
                         >
-                          Create a Netflix clone from Scratch: JavaScript
+                          <CommonText
+                            content={
+                              "Create a Netflix clone from Scratch: JavaScript"
+                            }
+                            className={""}
+                          />
                         </Span>
                       </HomeUnitAnchor>
-                    </p>
+                    </div>
 
-                    <p>
+                    <div>
                       <HomeUnitAnchor>
                         <Span
                           sx={{
@@ -93,43 +92,57 @@ export const HomePage: React.FunctionComponent<headerProps> = (props) => {
                             },
                           }}
                         >
-                          PHP + MySQL
+                          <CommonText content={"PHP + MySQL"} className={""} />
                         </Span>
                       </HomeUnitAnchor>
                       "
-                    </p>
-                  </HomeUnitTitle>
-                </HomeUnitTitleContent>
-              </HomeUnitTitleContainer>
+                    </div>
+                  </HomeMainUnitTitle>
+                </HomeMainUnitTitleContent>
+              </HomeMainUnitTitleContainer>
 
               <MainCarouselContainer>
                 <CourseUnitCard>
                   <CarouselScrollItem>
                     <ScrollItemContainer>
                       <ImageContainer>
-                        <Image src={WebRtc} alt="" />
+                        <Image
+                          src={WebRtc}
+                          className={"courseCardImage"}
+                          alt="Course Card Image"
+                        />
                       </ImageContainer>
 
                       <CourseCard>
                         <CourseTitleUrl>
                           <CourseTitleAnchor>
                             <CourseHeaderContent>
-                              <CourseHeaderText>
-                                Discord Clone - Learn MERN
-                              </CourseHeaderText>
-                              <CourseEllipsisText>
-                                Stack with WebRTC and SocketIO
-                              </CourseEllipsisText>
+                              <CommonText
+                                content={"Discord Clone - Learn MERN"}
+                                className={""}
+                              />
+
+                              <CommonText
+                                content={"Stack with WebRTC and SocketIO"}
+                                className="courseEllipsisText"
+                              />
                             </CourseHeaderContent>
                           </CourseTitleAnchor>
 
                           <AuthorContainer>
-                            <AuthorTitle>Marek Gryszkiewicz</AuthorTitle>
+                            <CommonText
+                              content={"Marek Gryszkiewicz"}
+                              className="authorTitle"
+                            />
                           </AuthorContainer>
 
                           <CourseCardRate>
                             <StarRatingContainer>
-                              <StarHeadingNumber>4.6</StarHeadingNumber>
+                              <CommonText
+                                content={"4.6"}
+                                className="starHeadingNumber"
+                              />
+
                               <GradeIcon
                                 sx={{
                                   color: "#E5981A",
@@ -165,26 +178,39 @@ export const HomePage: React.FunctionComponent<headerProps> = (props) => {
                                   height: "12px",
                                 }}
                               />
-                              <Reviews>(124)</Reviews>
+
+                              <CommonText
+                                content={"(124)"}
+                                className="reviews"
+                              />
                             </StarRatingContainer>
                           </CourseCardRate>
 
                           <PriceTextContainer>
                             <CurrentPriceContainer>
-                              <CurrentPriceText>₦3,900</CurrentPriceText>
+                              <CommonText
+                                content={"₦3,900"}
+                                className="currentPriceText"
+                              />
                             </CurrentPriceContainer>
 
                             <OriginalPriceContainer>
                               <OriginalPriceText>
                                 <s>
-                                  <span>₦17,500</span>
+                                  <CommonText
+                                    content={"₦17,500"}
+                                    className={""}
+                                  />
                                 </s>
                               </OriginalPriceText>
                             </OriginalPriceContainer>
                           </PriceTextContainer>
 
                           <CourseBadgeContainer>
-                            <CourseBadge>Bestseller</CourseBadge>
+                            <CommonText
+                              content={"Bestseller"}
+                              className={"courseBadge"}
+                            />
                           </CourseBadgeContainer>
                         </CourseTitleUrl>
                       </CourseCard>
@@ -202,7 +228,7 @@ export const HomePage: React.FunctionComponent<headerProps> = (props) => {
               </MainCarouselContainer>
             </ComponentMargin>
           </HomeComponentMargin>
-        </HomeComponentContainer>
+        </HomeMainComponentContainer>
       </HomePageContainer>
     </StyledHomeMainContent>
   );
