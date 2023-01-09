@@ -77,7 +77,7 @@ export const CarouselItems = styled("div")({
   overflowX: "hidden",
 });
 
-export const HomeMainComponentContainer = styled("div")({
+export const MainComponentContainer = styled("div")({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
@@ -99,7 +99,7 @@ export const HomeMainComponentContainer = styled("div")({
   cursor: "pointer",
 });
 
-export const HomeComponentMargin = styled("div")({
+export const MainComponentMargin = styled("div")({
   display: "flex",
   flexDirection: "column",
   alignItems: "flex-start",
@@ -114,7 +114,7 @@ export const HomeComponentMargin = styled("div")({
   padding: 0,
 });
 
-export const HomeMainHeaderText = styled("h2")({
+export const MainHeaderText = styled("h2")({
   display: "flex",
   alignItems: "center",
   color: "#1c1d1f",
@@ -146,7 +146,7 @@ export const ComponentMargin = styled("div")({
   width: "100%",
 });
 
-export const HomeMainUnitTitleContainer = styled("div")({
+export const MainUnitTitleContainer = styled("div")({
   display: "flex",
   alignItems: "center",
   justifyContent: "flex-start",
@@ -160,7 +160,7 @@ export const HomeMainUnitTitleContainer = styled("div")({
   width: "100%",
 });
 
-export const HomeMainUnitTitleContent = styled("div")({
+export const MainUnitTitleContent = styled("div")({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "baseline",
@@ -173,7 +173,7 @@ export const HomeMainUnitTitleContent = styled("div")({
   padding: 0,
 });
 
-export const HomeMainUnitTitle = styled("div")({
+export const MainUnitTitle = styled("div")({
   display: "flex",
   flexDirection: "column",
   alignItems: "baseline",
@@ -187,9 +187,10 @@ export const HomeMainUnitTitle = styled("div")({
   letterSpacing: "-0.2px",
   fontSize: "24px",
   maxWidth: "800",
+  width: "100%",
 });
 
-export const HomeUnitAnchor = styled("a")({
+export const MainUnitAnchor = styled("a")({
   fontFamily:
     "udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
   fontWeight: 700,
@@ -221,7 +222,7 @@ export const MainCarouselContainer = styled("div")({
   padding: 0,
   position: "relative",
   width: "100%",
-  height: 290.52,
+  // height: 290.52,
   backgroundColor: "#f0f0ff",
 });
 
@@ -249,7 +250,7 @@ export const CourseUnitCard = styled("div")({
   position: "relative",
 });
 
-export const CarouselButton = styled("button")({
+export const MainCarouselBackButton = styled("button")({
   margin: 0,
   fontWeight: 700,
   lineHeight: 1.2,
@@ -275,7 +276,7 @@ export const CarouselButton = styled("button")({
   zIndex: "1010",
 });
 
-export const CarouselSecondButton = styled("button")({
+export const MainCarouselForwardButton = styled("button")({
   margin: 0,
   fontWeight: 700,
   lineHeight: 1.2,

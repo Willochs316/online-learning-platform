@@ -1,26 +1,26 @@
 import * as React from "react";
 import "./homePage.css";
 import {
-  CarouselButton,
   TopCarouselContainer,
   CarouselItems,
   CarouselScrollItem,
-  CarouselSecondButton,
   ComponentMargin,
   CourseCard,
   CourseHeaderContent,
   CourseTitleAnchor,
   CourseTitleUrl,
   CourseUnitCard,
-  HomeMainComponentContainer,
-  HomeComponentMargin,
-  HomeMainHeaderText,
+  MainCarouselBackButton,
+  MainCarouselForwardButton,
+  MainComponentContainer,
+  MainComponentMargin,
+  MainHeaderText,
   HomePageTopCarousel,
   HomePageContainer,
-  HomeUnitAnchor,
-  HomeMainUnitTitle,
-  HomeMainUnitTitleContainer,
-  HomeMainUnitTitleContent,
+  MainUnitAnchor,
+  MainUnitTitle,
+  MainUnitTitleContainer,
+  MainUnitTitleContent,
   ImageContainer,
   MainCarouselContainer,
   ScrollItemContainer,
@@ -55,17 +55,17 @@ export const HomePage: React.FunctionComponent<homeProps> = (props) => {
           </TopCarouselContainer>
         </HomePageTopCarousel>
 
-        <HomeMainComponentContainer>
-          <HomeComponentMargin>
-            <HomeMainHeaderText>What to learn next</HomeMainHeaderText>
+        <MainComponentContainer>
+          <MainComponentMargin>
+            <MainHeaderText>What to learn next</MainHeaderText>
 
             <ComponentMargin>
-              <HomeMainUnitTitleContainer>
-                <HomeMainUnitTitleContent>
-                  <HomeMainUnitTitle>
+              <MainUnitTitleContainer>
+                <MainUnitTitleContent>
+                  <MainUnitTitle>
                     <div>
                       Because you viewed "
-                      <HomeUnitAnchor>
+                      <MainUnitAnchor>
                         <Span
                           sx={{
                             ":hover": {
@@ -80,11 +80,11 @@ export const HomePage: React.FunctionComponent<homeProps> = (props) => {
                             className={""}
                           />
                         </Span>
-                      </HomeUnitAnchor>
+                      </MainUnitAnchor>
                     </div>
 
                     <div>
-                      <HomeUnitAnchor>
+                      <MainUnitAnchor>
                         <Span
                           sx={{
                             ":hover": {
@@ -94,12 +94,12 @@ export const HomePage: React.FunctionComponent<homeProps> = (props) => {
                         >
                           <CommonText content={"PHP + MySQL"} className={""} />
                         </Span>
-                      </HomeUnitAnchor>
+                      </MainUnitAnchor>
                       "
                     </div>
-                  </HomeMainUnitTitle>
-                </HomeMainUnitTitleContent>
-              </HomeMainUnitTitleContainer>
+                  </MainUnitTitle>
+                </MainUnitTitleContent>
+              </MainUnitTitleContainer>
 
               <MainCarouselContainer>
                 <CourseUnitCard>
@@ -217,18 +217,702 @@ export const HomePage: React.FunctionComponent<homeProps> = (props) => {
                     </ScrollItemContainer>
                   </CarouselScrollItem>
 
-                  <CarouselButton>
-                    <ArrowBackIosNewOutlinedIcon />
-                  </CarouselButton>
+                  <CarouselScrollItem>
+                    <ScrollItemContainer>
+                      <ImageContainer>
+                        <Image
+                          src={WebRtc}
+                          className={"courseCardImage"}
+                          alt="Course Card Image"
+                        />
+                      </ImageContainer>
 
-                  <CarouselSecondButton>
-                    <ArrowForwardIosOutlinedIcon />
-                  </CarouselSecondButton>
+                      <CourseCard>
+                        <CourseTitleUrl>
+                          <CourseTitleAnchor>
+                            <CourseHeaderContent>
+                              <CommonText
+                                content={"Discord Clone - Learn MERN"}
+                                className={""}
+                              />
+
+                              <CommonText
+                                content={"Stack with WebRTC and SocketIO"}
+                                className="courseEllipsisText"
+                              />
+                            </CourseHeaderContent>
+                          </CourseTitleAnchor>
+
+                          <AuthorContainer>
+                            <CommonText
+                              content={"Marek Gryszkiewicz"}
+                              className="authorTitle"
+                            />
+                          </AuthorContainer>
+
+                          <CourseCardRate>
+                            <StarRatingContainer>
+                              <CommonText
+                                content={"4.6"}
+                                className="starHeadingNumber"
+                              />
+
+                              <GradeIcon
+                                sx={{
+                                  color: "#E5981A",
+                                  width: "12px",
+                                  height: "12px",
+                                }}
+                              />
+                              <GradeIcon
+                                sx={{
+                                  color: "#E5981A",
+                                  width: "12px",
+                                  height: "12px",
+                                }}
+                              />
+                              <GradeIcon
+                                sx={{
+                                  color: "#E5981A",
+                                  width: "12px",
+                                  height: "12px",
+                                }}
+                              />
+                              <GradeIcon
+                                sx={{
+                                  color: "#E5981A",
+                                  width: "12px",
+                                  height: "12px",
+                                }}
+                              />
+                              <StarHalfIcon
+                                sx={{
+                                  color: "#E5981A",
+                                  width: "12px",
+                                  height: "12px",
+                                }}
+                              />
+
+                              <CommonText
+                                content={"(124)"}
+                                className="reviews"
+                              />
+                            </StarRatingContainer>
+                          </CourseCardRate>
+
+                          <PriceTextContainer>
+                            <CurrentPriceContainer>
+                              <CommonText
+                                content={"₦3,900"}
+                                className="currentPriceText"
+                              />
+                            </CurrentPriceContainer>
+
+                            <OriginalPriceContainer>
+                              <OriginalPriceText>
+                                <s>
+                                  <CommonText
+                                    content={"₦17,500"}
+                                    className={""}
+                                  />
+                                </s>
+                              </OriginalPriceText>
+                            </OriginalPriceContainer>
+                          </PriceTextContainer>
+
+                          <CourseBadgeContainer>
+                            <CommonText
+                              content={"Bestseller"}
+                              className={"courseBadge"}
+                            />
+                          </CourseBadgeContainer>
+                        </CourseTitleUrl>
+                      </CourseCard>
+                    </ScrollItemContainer>
+                  </CarouselScrollItem>
+
+                  <CarouselScrollItem>
+                    <ScrollItemContainer>
+                      <ImageContainer>
+                        <Image
+                          src={WebRtc}
+                          className={"courseCardImage"}
+                          alt="Course Card Image"
+                        />
+                      </ImageContainer>
+
+                      <CourseCard>
+                        <CourseTitleUrl>
+                          <CourseTitleAnchor>
+                            <CourseHeaderContent>
+                              <CommonText
+                                content={"Discord Clone - Learn MERN"}
+                                className={""}
+                              />
+
+                              <CommonText
+                                content={"Stack with WebRTC and SocketIO"}
+                                className="courseEllipsisText"
+                              />
+                            </CourseHeaderContent>
+                          </CourseTitleAnchor>
+
+                          <AuthorContainer>
+                            <CommonText
+                              content={"Marek Gryszkiewicz"}
+                              className="authorTitle"
+                            />
+                          </AuthorContainer>
+
+                          <CourseCardRate>
+                            <StarRatingContainer>
+                              <CommonText
+                                content={"4.6"}
+                                className="starHeadingNumber"
+                              />
+
+                              <GradeIcon
+                                sx={{
+                                  color: "#E5981A",
+                                  width: "12px",
+                                  height: "12px",
+                                }}
+                              />
+                              <GradeIcon
+                                sx={{
+                                  color: "#E5981A",
+                                  width: "12px",
+                                  height: "12px",
+                                }}
+                              />
+                              <GradeIcon
+                                sx={{
+                                  color: "#E5981A",
+                                  width: "12px",
+                                  height: "12px",
+                                }}
+                              />
+                              <GradeIcon
+                                sx={{
+                                  color: "#E5981A",
+                                  width: "12px",
+                                  height: "12px",
+                                }}
+                              />
+                              <StarHalfIcon
+                                sx={{
+                                  color: "#E5981A",
+                                  width: "12px",
+                                  height: "12px",
+                                }}
+                              />
+
+                              <CommonText
+                                content={"(124)"}
+                                className="reviews"
+                              />
+                            </StarRatingContainer>
+                          </CourseCardRate>
+
+                          <PriceTextContainer>
+                            <CurrentPriceContainer>
+                              <CommonText
+                                content={"₦3,900"}
+                                className="currentPriceText"
+                              />
+                            </CurrentPriceContainer>
+
+                            <OriginalPriceContainer>
+                              <OriginalPriceText>
+                                <s>
+                                  <CommonText
+                                    content={"₦17,500"}
+                                    className={""}
+                                  />
+                                </s>
+                              </OriginalPriceText>
+                            </OriginalPriceContainer>
+                          </PriceTextContainer>
+
+                          <CourseBadgeContainer>
+                            <CommonText
+                              content={"Bestseller"}
+                              className={"courseBadge"}
+                            />
+                          </CourseBadgeContainer>
+                        </CourseTitleUrl>
+                      </CourseCard>
+                    </ScrollItemContainer>
+                  </CarouselScrollItem>
+
+                  <CarouselScrollItem>
+                    <ScrollItemContainer>
+                      <ImageContainer>
+                        <Image
+                          src={WebRtc}
+                          className={"courseCardImage"}
+                          alt="Course Card Image"
+                        />
+                      </ImageContainer>
+
+                      <CourseCard>
+                        <CourseTitleUrl>
+                          <CourseTitleAnchor>
+                            <CourseHeaderContent>
+                              <CommonText
+                                content={"Discord Clone - Learn MERN"}
+                                className={""}
+                              />
+
+                              <CommonText
+                                content={"Stack with WebRTC and SocketIO"}
+                                className="courseEllipsisText"
+                              />
+                            </CourseHeaderContent>
+                          </CourseTitleAnchor>
+
+                          <AuthorContainer>
+                            <CommonText
+                              content={"Marek Gryszkiewicz"}
+                              className="authorTitle"
+                            />
+                          </AuthorContainer>
+
+                          <CourseCardRate>
+                            <StarRatingContainer>
+                              <CommonText
+                                content={"4.6"}
+                                className="starHeadingNumber"
+                              />
+
+                              <GradeIcon
+                                sx={{
+                                  color: "#E5981A",
+                                  width: "12px",
+                                  height: "12px",
+                                }}
+                              />
+                              <GradeIcon
+                                sx={{
+                                  color: "#E5981A",
+                                  width: "12px",
+                                  height: "12px",
+                                }}
+                              />
+                              <GradeIcon
+                                sx={{
+                                  color: "#E5981A",
+                                  width: "12px",
+                                  height: "12px",
+                                }}
+                              />
+                              <GradeIcon
+                                sx={{
+                                  color: "#E5981A",
+                                  width: "12px",
+                                  height: "12px",
+                                }}
+                              />
+                              <StarHalfIcon
+                                sx={{
+                                  color: "#E5981A",
+                                  width: "12px",
+                                  height: "12px",
+                                }}
+                              />
+
+                              <CommonText
+                                content={"(124)"}
+                                className="reviews"
+                              />
+                            </StarRatingContainer>
+                          </CourseCardRate>
+
+                          <PriceTextContainer>
+                            <CurrentPriceContainer>
+                              <CommonText
+                                content={"₦3,900"}
+                                className="currentPriceText"
+                              />
+                            </CurrentPriceContainer>
+
+                            <OriginalPriceContainer>
+                              <OriginalPriceText>
+                                <s>
+                                  <CommonText
+                                    content={"₦17,500"}
+                                    className={""}
+                                  />
+                                </s>
+                              </OriginalPriceText>
+                            </OriginalPriceContainer>
+                          </PriceTextContainer>
+
+                          <CourseBadgeContainer>
+                            <CommonText
+                              content={"Bestseller"}
+                              className={"courseBadge"}
+                            />
+                          </CourseBadgeContainer>
+                        </CourseTitleUrl>
+                      </CourseCard>
+                    </ScrollItemContainer>
+                  </CarouselScrollItem>
+
+                  <CarouselScrollItem>
+                    <ScrollItemContainer>
+                      <ImageContainer>
+                        <Image
+                          src={WebRtc}
+                          className={"courseCardImage"}
+                          alt="Course Card Image"
+                        />
+                      </ImageContainer>
+
+                      <CourseCard>
+                        <CourseTitleUrl>
+                          <CourseTitleAnchor>
+                            <CourseHeaderContent>
+                              <CommonText
+                                content={"Discord Clone - Learn MERN"}
+                                className={""}
+                              />
+
+                              <CommonText
+                                content={"Stack with WebRTC and SocketIO"}
+                                className="courseEllipsisText"
+                              />
+                            </CourseHeaderContent>
+                          </CourseTitleAnchor>
+
+                          <AuthorContainer>
+                            <CommonText
+                              content={"Marek Gryszkiewicz"}
+                              className="authorTitle"
+                            />
+                          </AuthorContainer>
+
+                          <CourseCardRate>
+                            <StarRatingContainer>
+                              <CommonText
+                                content={"4.6"}
+                                className="starHeadingNumber"
+                              />
+
+                              <GradeIcon
+                                sx={{
+                                  color: "#E5981A",
+                                  width: "12px",
+                                  height: "12px",
+                                }}
+                              />
+                              <GradeIcon
+                                sx={{
+                                  color: "#E5981A",
+                                  width: "12px",
+                                  height: "12px",
+                                }}
+                              />
+                              <GradeIcon
+                                sx={{
+                                  color: "#E5981A",
+                                  width: "12px",
+                                  height: "12px",
+                                }}
+                              />
+                              <GradeIcon
+                                sx={{
+                                  color: "#E5981A",
+                                  width: "12px",
+                                  height: "12px",
+                                }}
+                              />
+                              <StarHalfIcon
+                                sx={{
+                                  color: "#E5981A",
+                                  width: "12px",
+                                  height: "12px",
+                                }}
+                              />
+
+                              <CommonText
+                                content={"(124)"}
+                                className="reviews"
+                              />
+                            </StarRatingContainer>
+                          </CourseCardRate>
+
+                          <PriceTextContainer>
+                            <CurrentPriceContainer>
+                              <CommonText
+                                content={"₦3,900"}
+                                className="currentPriceText"
+                              />
+                            </CurrentPriceContainer>
+
+                            <OriginalPriceContainer>
+                              <OriginalPriceText>
+                                <s>
+                                  <CommonText
+                                    content={"₦17,500"}
+                                    className={""}
+                                  />
+                                </s>
+                              </OriginalPriceText>
+                            </OriginalPriceContainer>
+                          </PriceTextContainer>
+
+                          <CourseBadgeContainer>
+                            <CommonText
+                              content={"Bestseller"}
+                              className={"courseBadge"}
+                            />
+                          </CourseBadgeContainer>
+                        </CourseTitleUrl>
+                      </CourseCard>
+                    </ScrollItemContainer>
+                  </CarouselScrollItem>
+
+                  <CarouselScrollItem>
+                    <ScrollItemContainer>
+                      <ImageContainer>
+                        <Image
+                          src={WebRtc}
+                          className={"courseCardImage"}
+                          alt="Course Card Image"
+                        />
+                      </ImageContainer>
+
+                      <CourseCard>
+                        <CourseTitleUrl>
+                          <CourseTitleAnchor>
+                            <CourseHeaderContent>
+                              <CommonText
+                                content={"Discord Clone - Learn MERN"}
+                                className={""}
+                              />
+
+                              <CommonText
+                                content={"Stack with WebRTC and SocketIO"}
+                                className="courseEllipsisText"
+                              />
+                            </CourseHeaderContent>
+                          </CourseTitleAnchor>
+
+                          <AuthorContainer>
+                            <CommonText
+                              content={"Marek Gryszkiewicz"}
+                              className="authorTitle"
+                            />
+                          </AuthorContainer>
+
+                          <CourseCardRate>
+                            <StarRatingContainer>
+                              <CommonText
+                                content={"4.6"}
+                                className="starHeadingNumber"
+                              />
+
+                              <GradeIcon
+                                sx={{
+                                  color: "#E5981A",
+                                  width: "12px",
+                                  height: "12px",
+                                }}
+                              />
+                              <GradeIcon
+                                sx={{
+                                  color: "#E5981A",
+                                  width: "12px",
+                                  height: "12px",
+                                }}
+                              />
+                              <GradeIcon
+                                sx={{
+                                  color: "#E5981A",
+                                  width: "12px",
+                                  height: "12px",
+                                }}
+                              />
+                              <GradeIcon
+                                sx={{
+                                  color: "#E5981A",
+                                  width: "12px",
+                                  height: "12px",
+                                }}
+                              />
+                              <StarHalfIcon
+                                sx={{
+                                  color: "#E5981A",
+                                  width: "12px",
+                                  height: "12px",
+                                }}
+                              />
+
+                              <CommonText
+                                content={"(124)"}
+                                className="reviews"
+                              />
+                            </StarRatingContainer>
+                          </CourseCardRate>
+
+                          <PriceTextContainer>
+                            <CurrentPriceContainer>
+                              <CommonText
+                                content={"₦3,900"}
+                                className="currentPriceText"
+                              />
+                            </CurrentPriceContainer>
+
+                            <OriginalPriceContainer>
+                              <OriginalPriceText>
+                                <s>
+                                  <CommonText
+                                    content={"₦17,500"}
+                                    className={""}
+                                  />
+                                </s>
+                              </OriginalPriceText>
+                            </OriginalPriceContainer>
+                          </PriceTextContainer>
+
+                          <CourseBadgeContainer>
+                            <CommonText
+                              content={"Bestseller"}
+                              className={"courseBadge"}
+                            />
+                          </CourseBadgeContainer>
+                        </CourseTitleUrl>
+                      </CourseCard>
+                    </ScrollItemContainer>
+                  </CarouselScrollItem>
+
+                  <CarouselScrollItem>
+                    <ScrollItemContainer>
+                      <ImageContainer>
+                        <Image
+                          src={WebRtc}
+                          className={"courseCardImage"}
+                          alt="Course Card Image"
+                        />
+                      </ImageContainer>
+
+                      <CourseCard>
+                        <CourseTitleUrl>
+                          <CourseTitleAnchor>
+                            <CourseHeaderContent>
+                              <CommonText
+                                content={"Discord Clone - Learn MERN"}
+                                className={""}
+                              />
+
+                              <CommonText
+                                content={"Stack with WebRTC and SocketIO"}
+                                className="courseEllipsisText"
+                              />
+                            </CourseHeaderContent>
+                          </CourseTitleAnchor>
+
+                          <AuthorContainer>
+                            <CommonText
+                              content={"Marek Gryszkiewicz"}
+                              className="authorTitle"
+                            />
+                          </AuthorContainer>
+
+                          <CourseCardRate>
+                            <StarRatingContainer>
+                              <CommonText
+                                content={"4.6"}
+                                className="starHeadingNumber"
+                              />
+
+                              <GradeIcon
+                                sx={{
+                                  color: "#E5981A",
+                                  width: "12px",
+                                  height: "12px",
+                                }}
+                              />
+                              <GradeIcon
+                                sx={{
+                                  color: "#E5981A",
+                                  width: "12px",
+                                  height: "12px",
+                                }}
+                              />
+                              <GradeIcon
+                                sx={{
+                                  color: "#E5981A",
+                                  width: "12px",
+                                  height: "12px",
+                                }}
+                              />
+                              <GradeIcon
+                                sx={{
+                                  color: "#E5981A",
+                                  width: "12px",
+                                  height: "12px",
+                                }}
+                              />
+                              <StarHalfIcon
+                                sx={{
+                                  color: "#E5981A",
+                                  width: "12px",
+                                  height: "12px",
+                                }}
+                              />
+
+                              <CommonText
+                                content={"(124)"}
+                                className="reviews"
+                              />
+                            </StarRatingContainer>
+                          </CourseCardRate>
+
+                          <PriceTextContainer>
+                            <CurrentPriceContainer>
+                              <CommonText
+                                content={"₦3,900"}
+                                className="currentPriceText"
+                              />
+                            </CurrentPriceContainer>
+
+                            <OriginalPriceContainer>
+                              <OriginalPriceText>
+                                <s>
+                                  <CommonText
+                                    content={"₦17,500"}
+                                    className={""}
+                                  />
+                                </s>
+                              </OriginalPriceText>
+                            </OriginalPriceContainer>
+                          </PriceTextContainer>
+
+                          <CourseBadgeContainer>
+                            <CommonText
+                              content={"Bestseller"}
+                              className={"courseBadge"}
+                            />
+                          </CourseBadgeContainer>
+                        </CourseTitleUrl>
+                      </CourseCard>
+                    </ScrollItemContainer>
+                  </CarouselScrollItem>
                 </CourseUnitCard>
+
+                <MainCarouselBackButton>
+                  <ArrowBackIosNewOutlinedIcon />
+                </MainCarouselBackButton>
+
+                <MainCarouselForwardButton>
+                  <ArrowForwardIosOutlinedIcon />
+                </MainCarouselForwardButton>
               </MainCarouselContainer>
             </ComponentMargin>
-          </HomeComponentMargin>
-        </HomeMainComponentContainer>
+          </MainComponentMargin>
+        </MainComponentContainer>
       </HomePageContainer>
     </StyledHomeMainContent>
   );
