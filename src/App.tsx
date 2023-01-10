@@ -4,6 +4,7 @@ import Login from "./components/Login";
 import { CommonText } from "./common/CustomText";
 import { Header } from "./components/Header/header";
 import { HomePage } from "./components/HomePage/homePage";
+import { LoginForm } from "./components/LoginForm/loginForm";
 // import './App.css'
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <HomePage />
+      {/* <HomePage /> */}
+      <LoginForm />
     </div>
   );
 }

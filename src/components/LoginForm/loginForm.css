@@ -1,0 +1,102 @@
+.login-form--greeting {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #1c1d1f;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  /* max-width: 600px; */
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.2px;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.auth-google--social-btn {
+  margin: 0;
+  font-family: udemy sans, -apple-system, BlinkMacSystemFont, Roboto, segoe ui,
+    Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji,
+    segoe ui symbol;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.2px;
+  font-size: 16px;
+  position: relative;
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  min-width: 80px;
+  padding: 0 12px;
+  white-space: nowrap;
+  height: 48px;
+  color: #1c1d1f;
+  background-color: transparent;
+  border: 1px solid #1c1d1f;
+  margin-bottom: 8px;
+  width: 100%;
+  justify-content: left;
+}
+
+.googleIcon {
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.2px;
+  font-size: 16px;
+  cursor: pointer;
+  white-space: nowrap;
+  color: #1c1d1f;
+  margin: 0;
+  padding: 0;
+  fill: currentColor;
+  display: inline-block;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+}
+
+.email-form-control {
+  margin: 0;
+  background-image: none;
+  color: #1c1d1f;
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 16;
+  border-radius: 0;
+  display: block;
+  width: 100%;
+  border: 0 !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+  height: 60px !important;
+  padding: 20px 16px 0;
+  opacity: 0.2;
+  transition: opacity 100ms linear;
+  flex: 1;
+}
+
+.login-submit-button{
+  margin: 0;
+  background-image: none;
+  font-family: udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.2px;
+  font-size: 16px;
+  position: relative;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  min-width: 80px;
+  padding: 0 12px;
+  justify-content: center;
+  vertical-align: bottom;
+  white-space: nowrap;
+  height: 48px;
+  color: #fff;
+  background-color: #a435f0;
+  width: 100%;
+}
