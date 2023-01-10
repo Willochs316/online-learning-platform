@@ -65,8 +65,18 @@ export const LoginForm: React.FunctionComponent<loginProps> = (props) => {
                         max-length="64"
                         id="form-group--1"
                         type="email"
-                        className="email-form-control"
+                        className="form-input-control"
                       />
+                      <label
+                        htmlFor="form-group--1"
+                        className="input-form-label"
+                      >
+                        <span className="form-label-content">
+                          <span className="ud-compact-form-label-text">
+                            Email
+                          </span>
+                        </span>
+                      </label>
                     </FormInputContainer>
                   </FormFieldContainer>
                 </AuthFormFieldGroup>
@@ -76,13 +86,23 @@ export const LoginForm: React.FunctionComponent<loginProps> = (props) => {
                     <FormInputContainer>
                       <input
                         aria-invalid="false"
-                        name="email"
+                        name="password"
                         min-length="7"
                         max-length="64"
                         id="form-group--1"
-                        type="email"
-                        className="email-form-control"
+                        type="password"
+                        className="form-input-control"
                       />
+                      <label
+                        htmlFor="form-group--1"
+                        className="input-form-label"
+                      >
+                        <span className="form-label-content">
+                          <span className="ud-compact-form-label-text">
+                            Password
+                          </span>
+                        </span>
+                      </label>
                     </FormInputContainer>
                   </FormFieldContainer>
                 </AuthFormFieldGroup>

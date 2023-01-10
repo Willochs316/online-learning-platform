@@ -124,6 +124,7 @@ export const FormFieldContainer = styled("div")({
   // maxWidth: "600px",
   width: "100%",
   height: 62,
+  position: 'relative'
 });
 
 export const FormInputContainer = styled("div")({
@@ -141,6 +142,7 @@ export const FormInputContainer = styled("div")({
   width: "100%",
   height: 62,
   border: "1px solid #1c1d1f",
+  position: 'relative'
 });
 
 export const LoginFormFooter = styled("div")({
