@@ -83,8 +83,6 @@ export const LoginForm: React.FunctionComponent<loginProps> = (props) => {
                         type="email"
                         className="email-form-control"
                       />
-
-
                     </FormInputContainer>
                   </FormFieldContainer>
                 </AuthFormFieldGroup>
@@ -96,18 +94,32 @@ export const LoginForm: React.FunctionComponent<loginProps> = (props) => {
           </Div>
 
           <LoginFormFooter>
-<ForgotPassword>
-<span>or <a className="link-underline" href="/user/forgot-password/">Forgot Password</a></span>
-</ForgotPassword>
+            <ForgotPassword>
+              <span>
+                or{" "}
+                <a className="link-underline" href="/user/forgot-password/">
+                  Forgot Password
+                </a>
+              </span>
+            </ForgotPassword>
 
-<AccountSignUp>
-<span>Don't have an account? <a className="signup-text-bold" href="/join/signup-popup/">Sign up</a></span>
-</AccountSignUp>
+            <AccountSignUp>
+              <span>
+                Don't have an account?{" "}
+                <a className="signup-text-bold" href="/join/signup-popup/">
+                  Sign up
+                </a>
+              </span>
+            </AccountSignUp>
 
-<OrganizationAccount>
-<a className="organization-text-bold" href="/organization/global-login/">Log in with your organization.</a>
-</OrganizationAccount>
-
+            <OrganizationAccount>
+              <a
+                className="organization-text-bold"
+                href="/organization/global-login/"
+              >
+                Log in with your organization.
+              </a>
+            </OrganizationAccount>
           </LoginFormFooter>
         </LoginFormContainer>
       </LoginComponent>
