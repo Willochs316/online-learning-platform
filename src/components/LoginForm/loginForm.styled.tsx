@@ -142,3 +142,62 @@ export const FormInputContainer = styled("div")({
   height: 62,
   border: "1px solid #1c1d1f",
 });
+
+export const LoginFormFooter = styled("div")({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  fontFamily:
+    "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "16px",
+  color: "#1c1d1f",
+  margin: 0,
+  padding: 0,
+  textAlign: "center",
+  width: "100%",
+});
+
+export const ForgotPassword = styled("div")({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  color: "#1c1d1f",
+  textAlign: "center",
+  margin: 0,
+  padding: 0,
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "16px",
+  marginBottom: "32px",
+  width: "100%",
+});
+
+export const AccountSignUp = styled("div")({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  color: "#1c1d1f",
+  textAlign: "center",
+  margin: 0,
+  padding: 0,
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "16px",
+  width: "100%",
+});
+
+export const OrganizationAccount = styled("div")({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  color: "#1c1d1f",
+  textAlign: "center",
+  margin: 0,
+  padding: 0,
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "16px",
+});

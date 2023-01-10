@@ -63,7 +63,7 @@
   color: #1c1d1f;
   font-weight: 400;
   line-height: 1.4;
-  font-size: 16;
+  font-size: 16px;
   border-radius: 0;
   display: block;
   width: 100%;
@@ -72,15 +72,17 @@
   outline: 0 !important;
   height: 60px !important;
   padding: 20px 16px 0;
-  opacity: 0.2;
+  /* opacity: 0.2; */
   transition: opacity 100ms linear;
   flex: 1;
 }
 
-.login-submit-button{
+.login-submit-button {
   margin: 0;
   background-image: none;
-  font-family: udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+  font-family: udemy sans, -apple-system, BlinkMacSystemFont, Roboto, segoe ui,
+    Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji,
+    segoe ui symbol;
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.2px;
@@ -99,4 +101,44 @@
   color: #fff;
   background-color: #a435f0;
   width: 100%;
+}
+
+.login-submit-button:hover {
+  background-color: #8711d8;
+}
+
+.link-underline {
+  text-align: center;
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  color: #5624d0;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.signup-text-bold {
+  text-align: center;
+  line-height: 1.4;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  color: #5624d0;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.organization-text-bold {
+  text-align: center;
+  line-height: 1.4;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  color: #5624d0;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }

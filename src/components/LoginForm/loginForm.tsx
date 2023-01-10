@@ -1,16 +1,21 @@
+import { TextField } from "@mui/material";
 import * as React from "react";
 import Svgs from "../../assets/svgs";
 import "./loginForm.css";
 import {
+  AccountSignUp,
   AuthFormFieldGroup,
   Div,
+  ForgotPassword,
   FormField,
   FormFieldContainer,
   FormInputContainer,
   LoginComponent,
   LoginFormContainer,
+  LoginFormFooter,
   LoginFormGroup,
   LoginMainContainer,
+  OrganizationAccount,
 } from "./loginForm.styled";
 
 interface loginProps {}
@@ -50,30 +55,60 @@ export const LoginForm: React.FunctionComponent<loginProps> = (props) => {
 
             <LoginFormGroup>
               <FormField>
-<AuthFormFieldGroup>
-<FormFieldContainer>
+                <AuthFormFieldGroup>
+                  <FormFieldContainer>
+                    <FormInputContainer>
+                      <input
+                        aria-invalid="false"
+                        name="email"
+                        min-length="7"
+                        max-length="64"
+                        id="form-group--1"
+                        type="email"
+                        className="email-form-control"
+                      />
+                    </FormInputContainer>
+                  </FormFieldContainer>
+                </AuthFormFieldGroup>
 
-<FormInputContainer>
-<input aria-invalid="false" name="email" min-length="7" max-length="64" id="form-group--1" type="email" className="email-form-control" value="Email" />
-  </FormInputContainer>
+                <AuthFormFieldGroup>
+                  <FormFieldContainer>
+                    <FormInputContainer>
+                      <input
+                        aria-invalid="false"
+                        name="email"
+                        min-length="7"
+                        max-length="64"
+                        id="form-group--1"
+                        type="email"
+                        className="email-form-control"
+                      />
 
-</FormFieldContainer>
-</AuthFormFieldGroup>
 
-<AuthFormFieldGroup>
-<FormFieldContainer>
-
-<FormInputContainer>
-<input aria-invalid="false" name="email" min-length="7" max-length="64" id="form-group--1" type="email" className="email-form-control" value="Email" />
-  </FormInputContainer>
-
-</FormFieldContainer>
-</AuthFormFieldGroup>
-<button type="submit" className="login-submit-button"><span>Log In</span></button>
-
+                    </FormInputContainer>
+                  </FormFieldContainer>
+                </AuthFormFieldGroup>
+                <button type="submit" className="login-submit-button">
+                  <span>Log In</span>
+                </button>
               </FormField>
             </LoginFormGroup>
           </Div>
+
+          <LoginFormFooter>
+<ForgotPassword>
+<span>or <a className="link-underline" href="/user/forgot-password/">Forgot Password</a></span>
+</ForgotPassword>
+
+<AccountSignUp>
+<span>Don't have an account? <a className="signup-text-bold" href="/join/signup-popup/">Sign up</a></span>
+</AccountSignUp>
+
+<OrganizationAccount>
+<a className="organization-text-bold" href="/organization/global-login/">Log in with your organization.</a>
+</OrganizationAccount>
+
+          </LoginFormFooter>
         </LoginFormContainer>
       </LoginComponent>
     </LoginMainContainer>
