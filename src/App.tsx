@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Button from '@mui/material/Button';
 import Login from './components/Login';
 import { CommonText } from './common/CustomText';
+import { Header } from './components/Header/header';
 // import './App.css'
 
 function App() {
@@ -9,8 +10,7 @@ function App() {
 
   return (
     <div className="App">
-      <Button variant="outlined" >Hello World</Button>
-      <Login />
+      <Header  />
     </div>
   )
 }

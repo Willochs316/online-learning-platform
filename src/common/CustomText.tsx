@@ -10,7 +10,7 @@ export const CommonText: React.FunctionComponent<TextProps> = (props) => {
   const { content, className, size } = props;
 
   const style = {
-    fontSize: size === "small" ? "12px" : size === "medium" ? "16px" : "24px",
+    fontSize: size === "small" ? "14px" : size === "medium" ? "16px" : "24px",
   };
 
   return (
