@@ -24,5 +24,14 @@
 body {
   width: 100%;
   min-height: 100vh;
-  overflow: hidden;
+  overflow: auto;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.ud-icon{
+  width: 200px;
+  color:blue
 }
