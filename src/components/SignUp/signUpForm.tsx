@@ -9,11 +9,10 @@ import {
   FormField,
   FormFieldContainer,
   FormInputContainer,
-  LoginComponent,
-  LoginFormContainer,
-  LoginFormFooter,
+  SignUpComponent,
+  SignUpFormContainer,
   LoginFormGroup,
-  LoginMainContainer,
+  SignUpMainContainer,
   SignupFormFieldGroup,
   SignUpFormFooter,
   SignUpFormLogAccount,
@@ -27,9 +26,9 @@ interface signUpProps {}
 
 export const SignUpForm: React.FunctionComponent<signUpProps> = (props) => {
   return (
-    <LoginMainContainer>
-      <LoginComponent>
-        <LoginFormContainer>
+    <SignUpMainContainer>
+      <SignUpComponent>
+        <SignUpFormContainer>
           <h2 className="login-form--greeting">Sign up and start learning</h2>
 
           <Div>
@@ -186,8 +185,8 @@ export const SignUpForm: React.FunctionComponent<signUpProps> = (props) => {
               </span>
             </SignUpFormLogAccount>
           </SignUpFormFooter>
-        </LoginFormContainer>
-      </LoginComponent>
-    </LoginMainContainer>
+        </SignUpFormContainer>
+      </SignUpComponent>
+    </SignUpMainContainer>
   );
 };

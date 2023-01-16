@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <Header />
       {/* <HomePage /> */}
-      {/* <LoginForm /> */}
+     {/* <LoginForm /> */}
       <SignUpForm />
     </div>
   );

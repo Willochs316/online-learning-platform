@@ -144,6 +144,7 @@ export const ComponentMargin = styled("div")({
   margin: 0,
   padding: 0,
   width: "100%",
+  background: 'red'
 });
 
 export const MainUnitTitleContainer = styled("div")({

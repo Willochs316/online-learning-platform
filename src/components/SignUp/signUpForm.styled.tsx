@@ -1,6 +1,6 @@
 import { styled } from "@mui/system";
 
-export const LoginMainContainer = styled("div")({
+export const SignUpMainContainer = styled("div")({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -16,7 +16,7 @@ export const LoginMainContainer = styled("div")({
   width: "100%",
 });
 
-export const LoginComponent = styled("div")({
+export const SignUpComponent = styled("div")({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -29,7 +29,7 @@ export const LoginComponent = styled("div")({
   width: "100%",
 });
 
-export const LoginFormContainer = styled("div")({
+export const SignUpFormContainer = styled("div")({
   display: "flex",
   flexDirection: "column",
   alignItems: "flex-start",
