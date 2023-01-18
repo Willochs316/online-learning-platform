@@ -1,5 +1,4 @@
 import * as React from "react";
-import "./homePage.css";
 import {
   TopBillBoardCarousel,
   TopCarouselItems,
@@ -13,7 +12,6 @@ import {
   DiscoveryCarouselBackButton,
   DiscoveryCarouselForwardButton,
   CourseDiscoveryContainer,
-  CourseCardHeaderTitle,
   TopHomePageBillboardCarousel,
   AppHomeDataContent,
   CourseViewAnchorTag,
@@ -38,7 +36,6 @@ import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutl
 import WebRtc from "../../assets/images/web-rtc.jpeg";
 import GradeIcon from "@mui/icons-material/Grade";
 import StarHalfIcon from "@mui/icons-material/StarHalf";
-import { CommonText } from "../../common/CustomText";
 import { Image } from "../../common/Image";
 import { Typography } from "@mui/material";
 
