@@ -42,6 +42,7 @@ import GradeIcon from "@mui/icons-material/Grade";
 import StarHalfIcon from "@mui/icons-material/StarHalf";
 import { CommonText } from "../../common/CustomText";
 import { Image } from "../../common/Image";
+import { Button, Typography } from "@mui/material";
 
 interface homeProps {}
 
@@ -62,6 +63,7 @@ export const HomePage: React.FunctionComponent<homeProps> = (props) => {
           <DiscoverCourseComponent>
             <DiscoverCourseTitleContainer>
               {/* <MainUnitTitleContent> */}
+
               <DiscoverCourseTitle>
                 <div>
                   Because you viewed "
