@@ -3,26 +3,24 @@ import "./homePage.css";
 import {
   TopBillBoardCarousel,
   TopCarouselItems,
-  CourseCarouselScrollItem,
-  DiscoverCourseComponent,
+  ScrollItemCourseCardCarousel,
+  CourseDiscoveryContent,
   AuthorCourseCardContainer,
   AuthorCourseHeaderTitle,
-  AuthorCourseTitleAnchor,
+  AuthorCourseAnchorTag,
   AuthorCourseDetails,
-  CourseUnitCard,
-  MainCarouselBackButton,
-  MainCarouselForwardButton,
-  HomeDiscoverCourseContainer,
-  // MainComponentMargin,
+  DiscoveryCourseCardCarousel,
+  DiscoveryCarouselBackButton,
+  DiscoveryCarouselForwardButton,
+  CourseDiscoveryContainer,
   CourseCardHeaderTitle,
   TopHomePageBillboardCarousel,
   AppHomeDataContent,
-  DiscoverCourseTitleAnchor,
-  DiscoverCourseTitle,
-  DiscoverCourseTitleContainer,
-  // MainUnitTitleContent,
+  CourseViewAnchorTag,
+  CourseViewedTitle,
+  DiscoveryCourseParagraph,
   ImageContainer,
-  DiscoverCourseCardCarouselContainer,
+  DiscoveryCourseCardContainer,
   ScrollItemContainer,
   Span,
   AppHomePageWrapper,
@@ -42,7 +40,7 @@ import GradeIcon from "@mui/icons-material/Grade";
 import StarHalfIcon from "@mui/icons-material/StarHalf";
 import { CommonText } from "../../common/CustomText";
 import { Image } from "../../common/Image";
-import { Button, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 
 interface homeProps {}
 
@@ -56,56 +54,63 @@ export const HomePage: React.FunctionComponent<homeProps> = (props) => {
           </TopBillBoardCarousel>
         </TopHomePageBillboardCarousel>
 
-        <HomeDiscoverCourseContainer>
-          {/* <MainComponentMargin> */}
-          <CourseCardHeaderTitle>What to learn next</CourseCardHeaderTitle>
+        <CourseDiscoveryContainer>
+          <Typography
+            variant="h2"
+            sx={{
+              marginBottom: "24px",
+              lineHeight: 1.25,
+              letterSpacing: "0.5px",
+              width: "100%",
+            }}
+          >
+            What to learn next
+          </Typography>
 
-          <DiscoverCourseComponent>
-            <DiscoverCourseTitleContainer>
-              {/* <MainUnitTitleContent> */}
-
-              <DiscoverCourseTitle>
+          <CourseDiscoveryContent>
+            <DiscoveryCourseParagraph>
+              <CourseViewedTitle>
                 <div>
                   Because you viewed "
-                  <DiscoverCourseTitleAnchor>
-                    <Span
-                      sx={{
-                        ":hover": {
-                          color: "#401B9C",
-                        },
-                      }}
-                    >
-                      <CommonText
-                        content={
-                          "Create a Netflix clone from Scratch: JavaScript"
-                        }
-                        className={""}
-                      />
+                  <CourseViewAnchorTag>
+                    <Span>
+                      <Typography
+                        sx={{
+                          color: "secondary.contrastText",
+                          ":hover": {
+                            color: "#401B9C",
+                          },
+                        }}
+                      >
+                        Create a Netflix clone from Scratch: JavaScript
+                      </Typography>
                     </Span>
-                  </DiscoverCourseTitleAnchor>
+                  </CourseViewAnchorTag>
                 </div>
 
                 <div>
-                  <DiscoverCourseTitleAnchor>
-                    <Span
-                      sx={{
-                        ":hover": {
-                          color: "#401B9C",
-                        },
-                      }}
-                    >
-                      <CommonText content={"PHP + MySQL"} className={""} />
+                  <CourseViewAnchorTag>
+                    <Span>
+                      <Typography
+                        sx={{
+                          color: "secondary.contrastText",
+                          ":hover": {
+                            color: "#401B9C",
+                          },
+                        }}
+                      >
+                        PHP + MySQL
+                      </Typography>
                     </Span>
-                  </DiscoverCourseTitleAnchor>
+                  </CourseViewAnchorTag>
                   "
                 </div>
-              </DiscoverCourseTitle>
-              {/* </MainUnitTitleContent> */}
-            </DiscoverCourseTitleContainer>
+              </CourseViewedTitle>
+            </DiscoveryCourseParagraph>
 
-            <DiscoverCourseCardCarouselContainer>
-              <CourseUnitCard>
-                <CourseCarouselScrollItem>
+            <DiscoveryCourseCardContainer>
+              <DiscoveryCourseCardCarousel>
+                <ScrollItemCourseCardCarousel>
                   <ScrollItemContainer>
                     <ImageContainer>
                       <Image
@@ -117,33 +122,65 @@ export const HomePage: React.FunctionComponent<homeProps> = (props) => {
 
                     <AuthorCourseCardContainer>
                       <AuthorCourseDetails>
-                        <AuthorCourseTitleAnchor>
+                        <AuthorCourseAnchorTag>
                           <AuthorCourseHeaderTitle>
-                            <CommonText
-                              content={"Discord Clone - Learn MERN"}
-                              className={""}
-                            />
-
-                            <CommonText
-                              content={"Stack with WebRTC and SocketIO"}
-                              className="courseEllipsisText"
-                            />
+                            <Typography
+                              variant="subtitle2"
+                              sx={{ letterSpacing: "-.2px", lineHeight: 1.2 }}
+                            >
+                              Discord Clone - Learn MERN
+                            </Typography>
+                            <Typography
+                              variant="subtitle2"
+                              sx={{
+                                whiteSpace: "nowrap",
+                                overflow: "hidden",
+                                textOverflow: "ellipsis",
+                                width: "80%",
+                                letterSpacing: "-.2px",
+                                lineHeight: 1.2,
+                              }}
+                            >
+                              Stack with WebRTC and SocketIO
+                            </Typography>
                           </AuthorCourseHeaderTitle>
-                        </AuthorCourseTitleAnchor>
+                        </AuthorCourseAnchorTag>
 
                         <AuthorTitleContainer>
-                          <CommonText
-                            content={"Marek Gryszkiewicz"}
-                            className="authorTitle"
-                          />
+                          <Typography
+                            sx={{
+                              color: "secondary.light",
+                              fontWeight: 400,
+                              lineHeight: 1.4,
+                              fontSize: "12px",
+                              margin: 0,
+                              padding: 0,
+                              display: "flex",
+                              overflow: "hidden",
+                              textOverflow: "ellipsis",
+                              whiteSpace: "normal",
+                            }}
+                          >
+                            Marek Gryszkiewicz
+                          </Typography>
                         </AuthorTitleContainer>
 
                         <CourseCardStarRate>
                           <StarRatingContainer>
-                            <CommonText
-                              content={"4.6"}
-                              className="starHeadingNumber"
-                            />
+                            <Typography
+                              sx={{
+                                margin: 0,
+                                padding: 0,
+                                fontWeight: 700,
+                                lineHeight: 1.2,
+                                letterSpacing: "-0.2px",
+                                fontSize: "14px",
+                                marginRight: "4px",
+                                color: "#b4690e",
+                              }}
+                            >
+                              4.6
+                            </Typography>
 
                             <GradeIcon
                               sx={{
@@ -180,54 +217,96 @@ export const HomePage: React.FunctionComponent<homeProps> = (props) => {
                                 height: "12px",
                               }}
                             />
+                            <Typography
+                              sx={{
+                                color: "secondary.light",
+                                whiteSpace: "nowrap",
+                                margin: 0,
+                                padding: 0,
+                                fontWeight: 400,
+                                lineHeight: 1.4,
+                                fontSize: "12px",
 
-                            <CommonText content={"(124)"} className="reviews" />
+                                marginLeft: "4px",
+                              }}
+                            >
+                              (124)
+                            </Typography>
                           </StarRatingContainer>
                         </CourseCardStarRate>
 
                         <PriceTextContainer>
                           <CurrentPriceContainer>
-                            <CommonText
-                              content={"₦3,900"}
-                              className="currentPriceText"
-                            />
+                            <Typography
+                              variant="subtitle2"
+                              sx={{
+                                letterSpacing: "-0.2px",
+                                lineHeight: 1,
+                                whiteSpace: "nowrap",
+                                margin: 0,
+                                padding: 0,
+                              }}
+                            >
+                              ₦3,900
+                            </Typography>
                           </CurrentPriceContainer>
 
                           <OriginalPriceContainer>
                             <OriginalPriceText>
                               <s>
-                                <CommonText
-                                  content={"₦17,500"}
-                                  className={""}
-                                />
+                                <Typography
+                                  sx={{
+                                    fontWeight: 400,
+                                    fontSize: "14px",
+                                    lineHeight: 1,
+                                    whiteSpace: "nowrap",
+                                    color: "secondary.light",
+                                    margin: 0,
+                                    padding: 0,
+                                  }}
+                                >
+                                  ₦17,500
+                                </Typography>
                               </s>
                             </OriginalPriceText>
                           </OriginalPriceContainer>
                         </PriceTextContainer>
 
                         <AuthorCourseBadgeContainer>
-                          <CommonText
-                            content={"Bestseller"}
-                            className={"courseBadge"}
-                          />
+                          <Typography
+                            sx={{
+                              margin: 0,
+                              fontWeight: 700,
+                              lineHeight: 1.2,
+                              letterSpacing: "-0.2px",
+                              fontSize: "12px",
+                              display: "flex",
+                              alignItems: "center",
+                              padding: "4px 8px",
+                              whiteSpace: "nowrap",
+                              backgroundColor: "#eceb98",
+                              color: "#3d3c0a",
+                            }}
+                          >
+                            Bestseller
+                          </Typography>
                         </AuthorCourseBadgeContainer>
                       </AuthorCourseDetails>
                     </AuthorCourseCardContainer>
                   </ScrollItemContainer>
-                </CourseCarouselScrollItem>
-              </CourseUnitCard>
+                </ScrollItemCourseCardCarousel>
+              </DiscoveryCourseCardCarousel>
 
-              <MainCarouselBackButton>
+              <DiscoveryCarouselBackButton>
                 <ArrowBackIosNewOutlinedIcon />
-              </MainCarouselBackButton>
+              </DiscoveryCarouselBackButton>
 
-              <MainCarouselForwardButton>
+              <DiscoveryCarouselForwardButton>
                 <ArrowForwardIosOutlinedIcon />
-              </MainCarouselForwardButton>
-            </DiscoverCourseCardCarouselContainer>
-          </DiscoverCourseComponent>
-          {/* </MainComponentMargin> */}
-        </HomeDiscoverCourseContainer>
+              </DiscoveryCarouselForwardButton>
+            </DiscoveryCourseCardContainer>
+          </CourseDiscoveryContent>
+        </CourseDiscoveryContainer>
       </AppHomeDataContent>
     </AppHomePageWrapper>
   );

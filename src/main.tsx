@@ -19,16 +19,42 @@ const theme = createTheme({
     },
   },
   typography: {
+    h2: {
+      fontSize: "32px",
+      fontWeight: 700,
+      fontFamily:
+        "SuisseWorks,Georgia,Times,times new roman,serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+    },
+
     subtitle1: {
-      fontSize: 12,
+      fontSize: 16,
       color: "#1c1d1f",
       fontWeight: 400,
+      fontFamily:
+        "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
     },
-    body1: {
+
+    subtitle2: {
+      fontSize: 16,
+      color: "#1c1d1f",
       fontWeight: 700,
+      fontFamily:
+        "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+    },
+    
+    body1: {
+      fontSize: 24,
+      color: "#1c1d1f",
+      fontWeight: 700,
+      fontFamily:
+        "udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+      // fontFamily:
+      //   "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
     },
     button: {
-      fontStyle: "italic",
+      fontStyle: "normal",
+      fontFamily:
+        "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
     },
   },
 });

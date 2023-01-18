@@ -76,7 +76,7 @@ export const TopCarouselItems = styled("div")({
   overflowX: "hidden",
 });
 
-export const HomeDiscoverCourseContainer = styled("div")({
+export const CourseDiscoveryContainer = styled("div")({
   display: "flex",
   flexDirection: "column",
   alignItems: "flex-start",
@@ -98,21 +98,6 @@ export const HomeDiscoverCourseContainer = styled("div")({
   cursor: "pointer",
 });
 
-// export const MainComponentMargin = styled("div")({
-//   display: "flex",
-//   flexDirection: "column",
-//   alignItems: "flex-start",
-//   justifyContent: "center",
-//   fontWeight: 400,
-//   lineHeight: 1.4,
-//   fontSize: "16px",
-//   color: "#1c1d1f",
-//   width: "100%",
-//   height: "100%",
-//   margin: 0,
-//   padding: 0,
-// });
-
 export const CourseCardHeaderTitle = styled("h2")({
   display: "flex",
   alignItems: "center",
@@ -131,7 +116,7 @@ export const CourseCardHeaderTitle = styled("h2")({
   letterSpacing: "0.5px",
 });
 
-export const DiscoverCourseComponent = styled("div")({
+export const CourseDiscoveryContent = styled("div")({
   display: "flex",
   flexDirection: "column",
   alignItems: "flex-start",
@@ -145,7 +130,7 @@ export const DiscoverCourseComponent = styled("div")({
   width: "100%",
 });
 
-export const DiscoverCourseTitleContainer = styled("div")({
+export const DiscoveryCourseParagraph = styled("div")({
   display: "flex",
   alignItems: "center",
   justifyContent: "flex-start",
@@ -159,21 +144,7 @@ export const DiscoverCourseTitleContainer = styled("div")({
   width: "100%",
 });
 
-// export const MainUnitTitleContent = styled("div")({
-//   display: "flex",
-//   justifyContent: "center",
-//   alignItems: "baseline",
-//   width: "100%",
-//   fontWeight: 400,
-//   lineHeight: 1.4,
-//   fontSize: "16px",
-//   color: "#1c1d1f",
-//   margin: 0,
-//   padding: 0,
-//   background: "red",
-// });
-
-export const DiscoverCourseTitle = styled("div")({
+export const CourseViewedTitle = styled("div")({
   display: "flex",
   flexDirection: "column",
   alignItems: "baseline",
@@ -190,7 +161,7 @@ export const DiscoverCourseTitle = styled("div")({
   width: "100%",
 });
 
-export const DiscoverCourseTitleAnchor = styled("a")({
+export const CourseViewAnchorTag = styled("a")({
   fontFamily:
     "udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
   fontWeight: 700,
@@ -208,7 +179,7 @@ export const Span = styled("div")({
   display: "inline-block",
 });
 
-export const DiscoverCourseCardCarouselContainer = styled("div")({
+export const DiscoveryCourseCardContainer = styled("div")({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -226,7 +197,7 @@ export const DiscoverCourseCardCarouselContainer = styled("div")({
   backgroundColor: "#f0f0ff",
 });
 
-export const CourseUnitCard = styled("div")({
+export const DiscoveryCourseCardCarousel = styled("div")({
   display: "grid",
   gridAutoFlow: "column",
   gridGap: "16px",
@@ -250,7 +221,7 @@ export const CourseUnitCard = styled("div")({
   position: "relative",
 });
 
-export const MainCarouselBackButton = styled("button")({
+export const DiscoveryCarouselBackButton = styled("button")({
   margin: 0,
   fontWeight: 700,
   lineHeight: 1.2,
@@ -276,7 +247,7 @@ export const MainCarouselBackButton = styled("button")({
   zIndex: "1010",
 });
 
-export const MainCarouselForwardButton = styled("button")({
+export const DiscoveryCarouselForwardButton = styled("button")({
   margin: 0,
   fontWeight: 700,
   lineHeight: 1.2,
@@ -303,7 +274,7 @@ export const MainCarouselForwardButton = styled("button")({
   zIndex: 1,
 });
 
-export const CourseCarouselScrollItem = styled("div")({
+export const ScrollItemCourseCardCarousel = styled("div")({
   alignItems: "flex-start",
   display: "flex",
   justifyContent: "center",
@@ -395,7 +366,7 @@ export const AuthorCourseDetails = styled("h3")({
   width: "100%",
 });
 
-export const AuthorCourseTitleAnchor = styled("a")({
+export const AuthorCourseAnchorTag = styled("a")({
   display: "flex",
   alignItems: "baseline",
   justifyContent: "flex-start",
