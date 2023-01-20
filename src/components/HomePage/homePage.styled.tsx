@@ -39,11 +39,10 @@ export const TopHomePageBillboardCarousel = styled("div")({
   color: "#1c1d1f",
   padding: 0,
   margin: "0 auto",
-  //   maxWidth: "1340px",
-  //   minWidth: "600px",
+  maxWidth: "1340px",
+  minWidth: "600px",
   width: "100%",
   height: 448,
-  backgroundColor: "#f0f0ff",
 });
 
 export const TopBillBoardCarousel = styled("div")({
@@ -105,7 +104,6 @@ export const BillboardContentBox = styled("div")({
   left: "72px",
   top: "64px",
   maxWidth: "440px",
-  height: "180.8px",
   position: "absolute",
   boxShadow: "0 2px 4px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.08)",
   padding: "24px",

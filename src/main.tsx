@@ -33,7 +33,6 @@ const theme = createTheme({
       whiteSpace: "normal",
       maxWidth: "800px",
       width: "100%",
-      height: "80px",
       marginBottom: "8px",
       minWidth: "initial",
       padding: 0,
