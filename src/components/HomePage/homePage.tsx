@@ -30,6 +30,10 @@ import {
   OriginalPriceContainer,
   OriginalPriceText,
   AuthorCourseBadgeContainer,
+  BillBoardBannerContainer,
+  BillboardContentBox,
+  BillboardBackButton,
+  BillboardForwardButton,
 } from "./homePage.styled";
 import ArrowBackIosNewOutlinedIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
@@ -38,6 +42,7 @@ import GradeIcon from "@mui/icons-material/Grade";
 import StarHalfIcon from "@mui/icons-material/StarHalf";
 import { Image } from "../../common/Image";
 import { Typography } from "@mui/material";
+import { Svgs } from "../../assets/svgs";
 
 interface homeProps {}
 
@@ -47,7 +52,44 @@ export const HomePage: React.FunctionComponent<homeProps> = (props) => {
       <AppHomeDataContent>
         <TopHomePageBillboardCarousel>
           <TopBillBoardCarousel>
-            <TopCarouselItems></TopCarouselItems>
+            <TopCarouselItems>
+              <BillBoardBannerContainer>
+                <img
+                  width="1340"
+                  height="400"
+                  alt=""
+                  src="https://img-c.udemycdn.com/notices/web_banner/slide_1_image_udlite/bf1bd00b-e65c-4d18-8b3a-0176cfbb3601.jpg"
+                />
+
+                <BillboardContentBox>
+                  <Typography data-purpose="billboard-title" variant="h1">
+                    Unlock the power of your people
+                  </Typography>
+
+                  <p data-purpose="billboard-subtitle" className="ud-text-md ">
+                    Udemy Business is trusted by 12.5K+ companies around the
+                    world.{" "}
+                    <u>
+                      <a
+                        target="_blank"
+                        href="https://business.udemy.com/request-demo-mx/?ref=ub-hero-banner&amp;locale=en_US"
+                      >
+                        Find out what we can do for yours
+                      </a>
+                    </u>
+                    .
+                  </p>
+                </BillboardContentBox>
+
+                <BillboardBackButton>
+                  <ArrowBackIosNewOutlinedIcon />
+                </BillboardBackButton>
+
+                <BillboardForwardButton>
+                  <ArrowForwardIosOutlinedIcon />
+                </BillboardForwardButton>
+              </BillBoardBannerContainer>
+            </TopCarouselItems>
           </TopBillBoardCarousel>
         </TopHomePageBillboardCarousel>
 

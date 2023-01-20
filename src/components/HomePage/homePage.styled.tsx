@@ -58,6 +58,7 @@ export const TopBillBoardCarousel = styled("div")({
   color: "#1c1d1f",
   margin: 0,
   padding: 0,
+  position: "relative",
 });
 
 export const TopCarouselItems = styled("div")({
@@ -74,6 +75,90 @@ export const TopCarouselItems = styled("div")({
   scrollSnapStop: "always",
   touchAction: "manipulation",
   overflowX: "hidden",
+});
+
+export const BillBoardBannerContainer = styled("div")({
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "16px",
+  color: "#1c1d1f",
+  padding: 0,
+  display: "flex",
+  margin: "0 auto",
+  position: "relative",
+  width: "100%",
+  maxWidth: "1340px",
+  marginBottom: "48px",
+});
+
+export const BillboardContentBox = styled("div")({
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "16px",
+  color: "#1c1d1f",
+  margin: 0,
+  display: "flex",
+  flexDirection: "column",
+  background: "#fff",
+  width: "100vw",
+  left: "72px",
+  top: "64px",
+  maxWidth: "440px",
+  position: "absolute",
+  boxShadow: "0 2px 4px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.08)",
+  padding: "24px",
+});
+
+export const BillboardBackButton = styled("button")({
+  margin: 0,
+  fontWeight: 700,
+  lineHeight: 1.2,
+  letterSpacing: "-0.2px",
+  fontSize: "14px",
+  alignItems: "center",
+  cursor: "pointer",
+  display: "flex",
+  justifyContent: "center",
+  whiteSpace: "nowrap",
+  height: "40px",
+  color: "#fff",
+  backgroundColor: "#1c1d1f",
+  minWidth: "auto",
+  padding: "0 10px",
+  width: "40px",
+  borderRadius: "50%",
+  position: "absolute",
+  transform: "translateY(-50%)",
+  border: "1px solid #6a6f73",
+  boxShadow: "0 2px 4px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.08)",
+  left: "16px",
+  top: "200px",
+});
+
+export const BillboardForwardButton = styled("button")({
+  margin: 0,
+  fontWeight: 700,
+  lineHeight: 1.2,
+  letterSpacing: "-0.2px",
+  fontSize: "14px",
+  alignItems: "center",
+  cursor: "pointer",
+  display: "inline-flex",
+  justifyContent: "center",
+  whiteSpace: "nowrap",
+  height: "40px",
+  color: "#fff",
+  backgroundColor: "#1c1d1f",
+  minWidth: "auto",
+  padding: "0 10px",
+  width: "40px",
+  borderRadius: "50%",
+  position: "absolute",
+  transform: "translateY(-50%)",
+  border: "1px solid #6a6f73",
+  boxShadow: "0 2px 4px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.08)",
+  right: "16px",
+  top: "200px",
 });
 
 export const CourseDiscoveryContainer = styled("div")({

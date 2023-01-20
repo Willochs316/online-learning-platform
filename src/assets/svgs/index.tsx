@@ -1,7 +1,6 @@
 import { ReactComponent as FirstRating } from './firstRating.svg'
 
-const Svgs = {
+export const Svgs = {
   FirstRating,
 };
 
-export default Svgs;

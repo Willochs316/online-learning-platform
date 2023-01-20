@@ -19,6 +19,24 @@ const theme = createTheme({
     },
   },
   typography: {
+    h1: {
+      fontSize: "32px",
+      // fontFamily:
+      //   "SuisseWorks,Georgia,Times,times new roman,serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+      fontWeight: 700,
+      margin: 0,
+      lineHeight: 1.25,
+      letterSpacing: "-0.5px",
+      display: "flex",
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+      whiteSpace: "normal",
+      maxWidth: "800px",
+      marginBottom: "8px",
+      minWidth: "initial",
+      padding: 0,
+    },
+
     h2: {
       fontSize: "32px",
       fontWeight: 700,
@@ -41,7 +59,7 @@ const theme = createTheme({
       fontFamily:
         "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
     },
-    
+
     body1: {
       fontSize: 24,
       color: "#1c1d1f",
