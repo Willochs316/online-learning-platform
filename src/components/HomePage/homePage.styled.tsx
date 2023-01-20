@@ -99,11 +99,13 @@ export const BillboardContentBox = styled("div")({
   margin: 0,
   display: "flex",
   flexDirection: "column",
+  alignItems: "baseline",
   background: "#fff",
   width: "100vw",
   left: "72px",
   top: "64px",
   maxWidth: "440px",
+  height: "180.8px",
   position: "absolute",
   boxShadow: "0 2px 4px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.08)",
   padding: "24px",
@@ -227,6 +229,20 @@ export const DiscoveryCourseParagraph = styled("div")({
   padding: 0,
   marginBottom: "16px",
   width: "100%",
+
+  // fontWeight: 400,
+  // lineHeight: 1.4,
+  // fontSize: '16px',
+  // color: '#1c1d1f',
+  // aspectRatio: 'auto 1340 / 400',
+  // margin: 0,
+  // padding: 0,
+  // maxWidth: '100%',
+  // minWidth: 'initial',
+  // width: '100vw',
+  // height: 'auto',
+  // objectFit: 'contain',
+  // objectPosition: 'initial',
 });
 
 export const CourseViewedTitle = styled("div")({
@@ -513,7 +529,7 @@ export const StarRatingContainer = styled("span")({
   padding: 0,
   display: "flex",
   alignItems: "center",
-  width: 94.56,
+  width: "100%",
 });
 
 export const PriceTextContainer = styled("div")({

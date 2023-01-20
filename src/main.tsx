@@ -21,17 +21,19 @@ const theme = createTheme({
   typography: {
     h1: {
       fontSize: "32px",
-      // fontFamily:
-      //   "SuisseWorks,Georgia,Times,times new roman,serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+      fontFamily:
+        "SuisseWorks,Georgia,Times,times new roman,serif,apple color emoji,segoe ui emoji,segoe ui symbol",
       fontWeight: 700,
       margin: 0,
       lineHeight: 1.25,
-      letterSpacing: "-0.5px",
+      letterSpacing: "-1.01px",
       display: "flex",
       overflow: "hidden",
       textOverflow: "ellipsis",
       whiteSpace: "normal",
       maxWidth: "800px",
+      width: "100%",
+      height: "80px",
       marginBottom: "8px",
       minWidth: "initial",
       padding: 0,
@@ -48,6 +50,7 @@ const theme = createTheme({
       fontSize: 16,
       color: "#1c1d1f",
       fontWeight: 400,
+      lineHeight: 1.4,
       fontFamily:
         "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
     },
@@ -61,14 +64,34 @@ const theme = createTheme({
     },
 
     body1: {
-      fontSize: 24,
       color: "#1c1d1f",
-      fontWeight: 700,
+      margin: 0,
+      fontFamily:
+        "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+      fontWeight: 400,
+      lineHeight: 1.4,
+      display: "flex",
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+      whiteSpace: "normal",
+      maxWidth: "800px",
+      minWidth: "initial",
+      padding: 0,
+      fontSize: "19px",
+    },
+
+    body2: {
+      color: "#1c1d1f",
+      margin: 0,
+      padding: 0,
       fontFamily:
         "udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
-      // fontFamily:
-      //   "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+      fontWeight: 700,
+      lineHeight: 1.2,
+      letterSpacing: "-0.2px",
+      fontSize: "24px",
     },
+
     button: {
       fontStyle: "normal",
       fontFamily:

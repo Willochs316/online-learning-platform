@@ -42,7 +42,8 @@ import GradeIcon from "@mui/icons-material/Grade";
 import StarHalfIcon from "@mui/icons-material/StarHalf";
 import { Image } from "../../common/Image";
 import { Typography } from "@mui/material";
-import { Svgs } from "../../assets/svgs";
+import firstBillboard from "../../assets/images/first-billboard-banner.jpg";
+import secondBillboard from "../../assets/images/second-billboard-banner.jpg";
 
 interface homeProps {}
 
@@ -54,23 +55,22 @@ export const HomePage: React.FunctionComponent<homeProps> = (props) => {
           <TopBillBoardCarousel>
             <TopCarouselItems>
               <BillBoardBannerContainer>
-                <img
-                  width="1340"
-                  height="400"
-                  alt=""
-                  src="https://img-c.udemycdn.com/notices/web_banner/slide_1_image_udlite/bf1bd00b-e65c-4d18-8b3a-0176cfbb3601.jpg"
-                />
+                <img width="1340" height="400" alt="" src={firstBillboard} />
 
                 <BillboardContentBox>
                   <Typography data-purpose="billboard-title" variant="h1">
                     Unlock the power of your people
                   </Typography>
 
-                  <p data-purpose="billboard-subtitle" className="ud-text-md ">
+                  <Typography
+                    variant="subtitle1"
+                    data-purpose="billboard-subtitle"
+                  >
                     Udemy Business is trusted by 12.5K+ companies around the
                     world.{" "}
                     <u>
                       <a
+                        style={{ color: "#5624d0" }}
                         target="_blank"
                         href="https://business.udemy.com/request-demo-mx/?ref=ub-hero-banner&amp;locale=en_US"
                       >
@@ -78,7 +78,7 @@ export const HomePage: React.FunctionComponent<homeProps> = (props) => {
                       </a>
                     </u>
                     .
-                  </p>
+                  </Typography>
                 </BillboardContentBox>
 
                 <BillboardBackButton>
@@ -89,6 +89,29 @@ export const HomePage: React.FunctionComponent<homeProps> = (props) => {
                   <ArrowForwardIosOutlinedIcon />
                 </BillboardForwardButton>
               </BillBoardBannerContainer>
+
+              {/* <BillBoardBannerContainer>
+                <img width="1340" height="400" alt="" src={secondBillboard} />
+
+                <BillboardContentBox>
+                  <Typography data-purpose="billboard-title" variant="h1">
+                    Learning that gets you
+                  </Typography>
+
+                  <Typography variant="body1" data-purpose="billboard-subtitle">
+                    Skills for your present (and your future). Get started with
+                    us.{" "}
+                  </Typography>
+                </BillboardContentBox>
+
+                <BillboardBackButton>
+                  <ArrowBackIosNewOutlinedIcon />
+                </BillboardBackButton>
+
+                <BillboardForwardButton>
+                  <ArrowForwardIosOutlinedIcon />
+                </BillboardForwardButton>
+              </BillBoardBannerContainer> */}
             </TopCarouselItems>
           </TopBillBoardCarousel>
         </TopHomePageBillboardCarousel>
@@ -114,6 +137,7 @@ export const HomePage: React.FunctionComponent<homeProps> = (props) => {
                   <CourseViewAnchorTag>
                     <Span>
                       <Typography
+                        variant="body2"
                         sx={{
                           color: "secondary.contrastText",
                           ":hover": {
@@ -131,6 +155,7 @@ export const HomePage: React.FunctionComponent<homeProps> = (props) => {
                   <CourseViewAnchorTag>
                     <Span>
                       <Typography
+                        variant="body2"
                         sx={{
                           color: "secondary.contrastText",
                           ":hover": {
@@ -265,7 +290,6 @@ export const HomePage: React.FunctionComponent<homeProps> = (props) => {
                                 fontWeight: 400,
                                 lineHeight: 1.4,
                                 fontSize: "12px",
-
                                 marginLeft: "4px",
                               }}
                             >
