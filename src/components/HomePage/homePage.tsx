@@ -52,16 +52,6 @@ interface homeProps {
 export const HomePage: React.FunctionComponent<homeProps> = (props) => {
   const { images, currentBillboard, setCurrentBillboard } = props;
 
-  React.useEffect(() => {
-    const slideInterval = setInterval(() => {
-      setCurrentBillboard((currentBillboard: number) =>
-        currentBillboard < images.length - 1 ? currentBillboard + 1 : 0
-      );
-    }, 3000);
-
-    return () => clearInterval(slideInterval);
-  }, []);
-
   const handlePrev = () => {
     const index =
       currentBillboard > 0 ? currentBillboard - 1 : images.length - 1;
@@ -73,6 +63,16 @@ export const HomePage: React.FunctionComponent<homeProps> = (props) => {
       currentBillboard < images.length - 1 ? currentBillboard + 1 : 0;
     setCurrentBillboard(index);
   };
+
+  React.useEffect(() => {
+    const slideInterval = setInterval(() => {
+      setCurrentBillboard((currentBillboard: number) =>
+        currentBillboard < images.length - 1 ? currentBillboard + 1 : 0
+      );
+    }, 6000);
+
+    return () => clearInterval(slideInterval);
+  }, []);
 
   return (
     <AppHomePageWrapper>
