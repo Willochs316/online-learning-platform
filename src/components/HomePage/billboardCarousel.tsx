@@ -1,37 +1,20 @@
 import * as React from "react";
 import { BillboardContentBox } from "./homePage.styled";
 import { Typography } from "@mui/material";
-import firstBillboard from "../../assets/images/first-billboard-banner.jpg";
-import secondBillboard from "../../assets/images/second-billboard-banner.jpg";
 
-interface homeProps {}
+interface homeProps {
+  images?: any;
+  currentBillboard?: any;
+}
 
 export const BillboardCarousel: React.FunctionComponent<homeProps> = (
   props
 ) => {
-  const [currentBillboard, setCurrentBillboard] = React.useState(0);
-
-  const images = [
-    {
-      title: "Unlock the power of your people",
-      subtitle:
-        "Udemy Business is trusted by 12.5K+ companies around the world",
-      anchorText: "Find out what we can do for yours",
-      dot: ".",
-      img: `${firstBillboard}`,
-    },
-
-    {
-      title: "Learning that gets you",
-      content:
-        "Skills for your present (and your future). Get started with us.",
-      img: `${secondBillboard}`,
-    },
-  ];
+  const { images, currentBillboard } = props;
 
   return (
     <>
-      {images.map((image, index) => (
+      {images.map((image: any, index: 0) => (
         <div key={index}>
           <img
             width="1340"

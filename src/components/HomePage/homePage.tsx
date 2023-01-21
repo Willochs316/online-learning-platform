@@ -31,7 +31,6 @@ import {
   OriginalPriceText,
   AuthorCourseBadgeContainer,
   BillBoardBannerContainer,
-  BillboardContentBox,
   BillboardBackButton,
   BillboardForwardButton,
 } from "./homePage.styled";
@@ -42,13 +41,26 @@ import GradeIcon from "@mui/icons-material/Grade";
 import StarHalfIcon from "@mui/icons-material/StarHalf";
 import { Image } from "../../common/Image";
 import { Typography } from "@mui/material";
-import firstBillboard from "../../assets/images/first-billboard-banner.jpg";
-import secondBillboard from "../../assets/images/second-billboard-banner.jpg";
 import { BillboardCarousel } from "./billboardCarousel";
 
-interface homeProps {}
+interface homeProps {
+  images: any;
+  currentBillboard?: any;
+  setCurrentBillboard?: any;
+}
 
 export const HomePage: React.FunctionComponent<homeProps> = (props) => {
+  const { images, currentBillboard, setCurrentBillboard } = props;
+
+  const handlePrev = () => {
+    currentBillboard > 0 && setCurrentBillboard(currentBillboard - 1);
+  };
+
+  const handleNext = () => {
+    currentBillboard < images.length - 1 &&
+      setCurrentBillboard(currentBillboard + 1);
+  };
+
   return (
     <AppHomePageWrapper>
       <AppHomeDataContent>
@@ -56,13 +68,16 @@ export const HomePage: React.FunctionComponent<homeProps> = (props) => {
           <TopBillBoardCarousel>
             <TopCarouselItems>
               <BillBoardBannerContainer>
-                <BillboardCarousel />
+                <BillboardCarousel
+                  images={images}
+                  currentBillboard={currentBillboard}
+                />
 
-                <BillboardBackButton>
+                <BillboardBackButton onClick={handlePrev}>
                   <ArrowBackIosNewOutlinedIcon />
                 </BillboardBackButton>
 
-                <BillboardForwardButton>
+                <BillboardForwardButton onClick={handleNext}>
                   <ArrowForwardIosOutlinedIcon />
                 </BillboardForwardButton>
               </BillBoardBannerContainer>

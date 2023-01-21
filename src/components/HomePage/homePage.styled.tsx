@@ -199,7 +199,6 @@ export const CourseCardHeaderTitle = styled("h2")({
   fontSize: "32px",
   lineHeight: 1.25,
   letterSpacing: "0.5px",
-  backgroundColor: "red",
 });
 
 export const CourseDiscoveryContent = styled("div")({
