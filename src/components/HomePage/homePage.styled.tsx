@@ -199,6 +199,7 @@ export const CourseCardHeaderTitle = styled("h2")({
   fontSize: "32px",
   lineHeight: 1.25,
   letterSpacing: "0.5px",
+  backgroundColor: "red",
 });
 
 export const CourseDiscoveryContent = styled("div")({
@@ -227,20 +228,6 @@ export const DiscoveryCourseParagraph = styled("div")({
   padding: 0,
   marginBottom: "16px",
   width: "100%",
-
-  // fontWeight: 400,
-  // lineHeight: 1.4,
-  // fontSize: '16px',
-  // color: '#1c1d1f',
-  // aspectRatio: 'auto 1340 / 400',
-  // margin: 0,
-  // padding: 0,
-  // maxWidth: '100%',
-  // minWidth: 'initial',
-  // width: '100vw',
-  // height: 'auto',
-  // objectFit: 'contain',
-  // objectPosition: 'initial',
 });
 
 export const CourseViewedTitle = styled("div")({

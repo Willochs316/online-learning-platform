@@ -52,92 +52,11 @@ export const HomePage: React.FunctionComponent<homeProps> = (props) => {
   return (
     <AppHomePageWrapper>
       <AppHomeDataContent>
-        {/* <BillboardCarousel /> */}
-
         <TopHomePageBillboardCarousel>
           <TopBillBoardCarousel>
             <TopCarouselItems>
               <BillBoardBannerContainer>
-                <img width="1340" height="400" alt="" src={firstBillboard} />
-
-                <BillboardContentBox>
-                  <Typography data-purpose="billboard-title" variant="h1">
-                    Unlock the power of your people
-                  </Typography>
-
-                  <Typography
-                    variant="subtitle1"
-                    data-purpose="billboard-subtitle"
-                  >
-                    Udemy Business is trusted by 12.5K+ companies around the
-                    world.{" "}
-                    <u>
-                      <a
-                        style={{ color: "#5624d0" }}
-                        target="_blank"
-                        href="https://business.udemy.com/request-demo-mx/?ref=ub-hero-banner&amp;locale=en_US"
-                      >
-                        Find out what we can do for yours
-                      </a>
-                    </u>
-                    .
-                  </Typography>
-                </BillboardContentBox>
-
-                <BillboardBackButton>
-                  <ArrowBackIosNewOutlinedIcon />
-                </BillboardBackButton>
-
-                <BillboardForwardButton>
-                  <ArrowForwardIosOutlinedIcon />
-                </BillboardForwardButton>
-              </BillBoardBannerContainer>
-
-              <BillBoardBannerContainer>
-                <img width="1340" height="400" alt="" src={secondBillboard} />
-                <BillboardContentBox>
-                  <Typography data-purpose="billboard-title" variant="h1">
-                    Learning that gets you
-                  </Typography>
-                  <Typography variant="body1" data-purpose="billboard-subtitle">
-                    Skills for your present (and your future). Get started with
-                    us.{" "}
-                  </Typography>
-                </BillboardContentBox>
-                <BillboardBackButton>
-                  <ArrowBackIosNewOutlinedIcon />
-                </BillboardBackButton>
-                <BillboardForwardButton>
-                  <ArrowForwardIosOutlinedIcon />
-                </BillboardForwardButton>
-              </BillBoardBannerContainer>
-
-              <BillBoardBannerContainer>
-                <img width="1340" height="400" alt="" src={firstBillboard} />
-
-                <BillboardContentBox>
-                  <Typography data-purpose="billboard-title" variant="h1">
-                    Unlock the power of your people
-                  </Typography>
-
-                  <Typography
-                    variant="subtitle1"
-                    data-purpose="billboard-subtitle"
-                  >
-                    Udemy Business is trusted by 12.5K+ companies around the
-                    world.{" "}
-                    <u>
-                      <a
-                        style={{ color: "#5624d0" }}
-                        target="_blank"
-                        href="https://business.udemy.com/request-demo-mx/?ref=ub-hero-banner&amp;locale=en_US"
-                      >
-                        Find out what we can do for yours
-                      </a>
-                    </u>
-                    .
-                  </Typography>
-                </BillboardContentBox>
+                <BillboardCarousel />
 
                 <BillboardBackButton>
                   <ArrowBackIosNewOutlinedIcon />
