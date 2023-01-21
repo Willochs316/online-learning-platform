@@ -5,6 +5,9 @@ import { Header } from "./components/Header/header";
 import { HomePage } from "./components/HomePage/homePage";
 import firstBillboard from "./assets/images/first-billboard-banner.jpg";
 import secondBillboard from "./assets/images/second-billboard-banner.jpg";
+
+import { LoginForm } from "./components/LoginForm/loginForm";
+
 // import './App.css'
 
 function App() {
@@ -31,11 +34,15 @@ function App() {
   return (
     <div className="App">
       <Header />
+
       <HomePage
         images={images}
         currentBillboard={currentBillboard}
         setCurrentBillboard={setCurrentBillboard}
       />
+
+      <LoginForm />
+
     </div>
   );
 }
