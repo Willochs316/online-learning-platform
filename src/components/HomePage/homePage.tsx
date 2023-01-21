@@ -52,13 +52,26 @@ interface homeProps {
 export const HomePage: React.FunctionComponent<homeProps> = (props) => {
   const { images, currentBillboard, setCurrentBillboard } = props;
 
+  React.useEffect(() => {
+    const slideInterval = setInterval(() => {
+      setCurrentBillboard((currentBillboard: number) =>
+        currentBillboard < images.length - 1 ? currentBillboard + 1 : 0
+      );
+    }, 3000);
+
+    return () => clearInterval(slideInterval);
+  }, []);
+
   const handlePrev = () => {
-    currentBillboard > 0 && setCurrentBillboard(currentBillboard - 1);
+    const index =
+      currentBillboard > 0 ? currentBillboard - 1 : images.length - 1;
+    setCurrentBillboard(index);
   };
 
   const handleNext = () => {
-    currentBillboard < images.length - 1 &&
-      setCurrentBillboard(currentBillboard + 1);
+    const index =
+      currentBillboard < images.length - 1 ? currentBillboard + 1 : 0;
+    setCurrentBillboard(index);
   };
 
   return (

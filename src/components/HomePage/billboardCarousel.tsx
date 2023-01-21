@@ -1,5 +1,5 @@
 import * as React from "react";
-import { BillboardContentBox } from "./homePage.styled";
+import { BillboardContentBox, CarouselInner } from "./homePage.styled";
 import { Typography } from "@mui/material";
 
 interface homeProps {
@@ -15,7 +15,10 @@ export const BillboardCarousel: React.FunctionComponent<homeProps> = (
   return (
     <>
       {images.map((image: any, index: 0) => (
-        <div key={index}>
+        <CarouselInner
+          style={{ transform: `translate(${-currentBillboard * 100}%)` }}
+          key={index}
+        >
           <img
             width="1340"
             height="400"
@@ -47,7 +50,7 @@ export const BillboardCarousel: React.FunctionComponent<homeProps> = (
               {images[currentBillboard].content}
             </Typography>
           </BillboardContentBox>
-        </div>
+        </CarouselInner>
       ))}
     </>
   );

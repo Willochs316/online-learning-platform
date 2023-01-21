@@ -90,6 +90,11 @@ export const BillBoardBannerContainer = styled("div")({
   marginBottom: "48px",
 });
 
+export const CarouselInner = styled("div")({
+  display: "flex",
+  transition: 'ease 1s',
+})
+
 export const BillboardContentBox = styled("div")({
   fontWeight: 400,
   lineHeight: 1.4,
