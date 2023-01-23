@@ -42,15 +42,57 @@ import StarHalfIcon from "@mui/icons-material/StarHalf";
 import { Image } from "../../common/Image";
 import { Typography } from "@mui/material";
 import { BillboardCarousel } from "./billboardCarousel";
+import firstBillboard from "../../assets/images/first-billboard-banner.jpg";
+import secondBillboard from "../../assets/images/second-billboard-banner.jpg";
+import { CourseCardCarousel } from "./CourseCard";
 
-interface homeProps {
-  images: any;
-  currentBillboard?: any;
-  setCurrentBillboard?: any;
-}
+interface HomeProps {}
 
-export const HomePage: React.FunctionComponent<homeProps> = (props) => {
-  const { images, currentBillboard, setCurrentBillboard } = props;
+export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
+  const [currentBillboard, setCurrentBillboard] = React.useState(0);
+
+  const images = [
+    {
+      title: "Unlock the power of your people",
+      subtitle:
+        "Udemy Business is trusted by 12.5K+ companies around the world",
+      anchorText: "Find out what we can do for yours",
+      dot: ".",
+      img: `${firstBillboard}`,
+    },
+
+    {
+      title: "Learning that gets you",
+      content:
+        "Skills for your present (and your future). Get started with us.",
+      img: `${secondBillboard}`,
+    },
+  ];
+
+  const courseCard = [
+    {
+      img: `${WebRtc}`,
+      title: "Discord Clone - Learn MERN",
+      subtitle: "Stack with WebRTC and SocketIO",
+      instructor: "Marek Gryszkiewicz",
+      rate: "4.6",
+      rateNum: "(124)",
+      currentPrice: "₦3,900",
+      originalPrice: "₦17,500",
+      bestSeller: "Bestseller",
+    },
+
+    {
+      img: `${WebRtc}`,
+      title: "Software Engineering 101: Plan",
+      subtitle: "and Execute Better Software.",
+      instructor: "Kurt Anderson",
+      rate: "4.5",
+      rateNum: "(8,818)",
+      currentPrice: "₦10,500",
+      bestSeller: "Bestseller",
+    },
+  ];
 
   const handlePrev = () => {
     const index =
@@ -156,7 +198,9 @@ export const HomePage: React.FunctionComponent<homeProps> = (props) => {
 
             <DiscoveryCourseCardContainer>
               <DiscoveryCourseCardCarousel>
-                <ScrollItemCourseCardCarousel>
+                <CourseCardCarousel courseCard={courseCard} />
+
+                {/* <ScrollItemCourseCardCarousel>
                   <ScrollItemContainer>
                     <ImageContainer>
                       <Image
@@ -191,155 +235,155 @@ export const HomePage: React.FunctionComponent<homeProps> = (props) => {
                             </Typography>
                           </AuthorCourseHeaderTitle>
                         </AuthorCourseAnchorTag>
+                      </AuthorCourseDetails>
 
-                        <AuthorTitleContainer>
+                      <AuthorTitleContainer>
+                        <Typography
+                          sx={{
+                            color: "secondary.light",
+                            fontWeight: 400,
+                            lineHeight: 1.4,
+                            fontSize: "12px",
+                            margin: 0,
+                            padding: 0,
+                            display: "flex",
+                            overflow: "hidden",
+                            textOverflow: "ellipsis",
+                            whiteSpace: "normal",
+                          }}
+                        >
+                          Marek Gryszkiewicz
+                        </Typography>
+                      </AuthorTitleContainer>
+
+                      <CourseCardStarRate>
+                        <StarRatingContainer>
                           <Typography
                             sx={{
-                              color: "secondary.light",
-                              fontWeight: 400,
-                              lineHeight: 1.4,
-                              fontSize: "12px",
                               margin: 0,
                               padding: 0,
-                              display: "flex",
-                              overflow: "hidden",
-                              textOverflow: "ellipsis",
-                              whiteSpace: "normal",
-                            }}
-                          >
-                            Marek Gryszkiewicz
-                          </Typography>
-                        </AuthorTitleContainer>
-
-                        <CourseCardStarRate>
-                          <StarRatingContainer>
-                            <Typography
-                              sx={{
-                                margin: 0,
-                                padding: 0,
-                                fontWeight: 700,
-                                lineHeight: 1.2,
-                                letterSpacing: "-0.2px",
-                                fontSize: "14px",
-                                marginRight: "4px",
-                                color: "#b4690e",
-                              }}
-                            >
-                              4.6
-                            </Typography>
-
-                            <GradeIcon
-                              sx={{
-                                color: "#E5981A",
-                                width: "12px",
-                                height: "12px",
-                              }}
-                            />
-                            <GradeIcon
-                              sx={{
-                                color: "#E5981A",
-                                width: "12px",
-                                height: "12px",
-                              }}
-                            />
-                            <GradeIcon
-                              sx={{
-                                color: "#E5981A",
-                                width: "12px",
-                                height: "12px",
-                              }}
-                            />
-                            <GradeIcon
-                              sx={{
-                                color: "#E5981A",
-                                width: "12px",
-                                height: "12px",
-                              }}
-                            />
-                            <StarHalfIcon
-                              sx={{
-                                color: "#E5981A",
-                                width: "12px",
-                                height: "12px",
-                              }}
-                            />
-                            <Typography
-                              sx={{
-                                color: "secondary.light",
-                                whiteSpace: "nowrap",
-                                margin: 0,
-                                padding: 0,
-                                fontWeight: 400,
-                                lineHeight: 1.4,
-                                fontSize: "12px",
-                                marginLeft: "4px",
-                              }}
-                            >
-                              (124)
-                            </Typography>
-                          </StarRatingContainer>
-                        </CourseCardStarRate>
-
-                        <PriceTextContainer>
-                          <CurrentPriceContainer>
-                            <Typography
-                              variant="subtitle2"
-                              sx={{
-                                letterSpacing: "-0.2px",
-                                lineHeight: 1,
-                                whiteSpace: "nowrap",
-                                margin: 0,
-                                padding: 0,
-                              }}
-                            >
-                              ₦3,900
-                            </Typography>
-                          </CurrentPriceContainer>
-
-                          <OriginalPriceContainer>
-                            <OriginalPriceText>
-                              <s>
-                                <Typography
-                                  sx={{
-                                    fontWeight: 400,
-                                    fontSize: "14px",
-                                    lineHeight: 1,
-                                    whiteSpace: "nowrap",
-                                    color: "secondary.light",
-                                    margin: 0,
-                                    padding: 0,
-                                  }}
-                                >
-                                  ₦17,500
-                                </Typography>
-                              </s>
-                            </OriginalPriceText>
-                          </OriginalPriceContainer>
-                        </PriceTextContainer>
-
-                        <AuthorCourseBadgeContainer>
-                          <Typography
-                            sx={{
-                              margin: 0,
                               fontWeight: 700,
                               lineHeight: 1.2,
                               letterSpacing: "-0.2px",
-                              fontSize: "12px",
-                              display: "flex",
-                              alignItems: "center",
-                              padding: "4px 8px",
-                              whiteSpace: "nowrap",
-                              backgroundColor: "#eceb98",
-                              color: "#3d3c0a",
+                              fontSize: "14px",
+                              marginRight: "4px",
+                              color: "#b4690e",
                             }}
                           >
-                            Bestseller
+                            4.6
                           </Typography>
-                        </AuthorCourseBadgeContainer>
-                      </AuthorCourseDetails>
+
+                          <GradeIcon
+                            sx={{
+                              color: "#E5981A",
+                              width: "12px",
+                              height: "12px",
+                            }}
+                          />
+                          <GradeIcon
+                            sx={{
+                              color: "#E5981A",
+                              width: "12px",
+                              height: "12px",
+                            }}
+                          />
+                          <GradeIcon
+                            sx={{
+                              color: "#E5981A",
+                              width: "12px",
+                              height: "12px",
+                            }}
+                          />
+                          <GradeIcon
+                            sx={{
+                              color: "#E5981A",
+                              width: "12px",
+                              height: "12px",
+                            }}
+                          />
+                          <StarHalfIcon
+                            sx={{
+                              color: "#E5981A",
+                              width: "12px",
+                              height: "12px",
+                            }}
+                          />
+                          <Typography
+                            sx={{
+                              color: "secondary.light",
+                              whiteSpace: "nowrap",
+                              margin: 0,
+                              padding: 0,
+                              fontWeight: 400,
+                              lineHeight: 1.4,
+                              fontSize: "12px",
+                              marginLeft: "4px",
+                            }}
+                          >
+                            (124)
+                          </Typography>
+                        </StarRatingContainer>
+                      </CourseCardStarRate>
+
+                      <PriceTextContainer>
+                        <CurrentPriceContainer>
+                          <Typography
+                            variant="subtitle2"
+                            sx={{
+                              letterSpacing: "-0.2px",
+                              lineHeight: 1,
+                              whiteSpace: "nowrap",
+                              margin: 0,
+                              padding: 0,
+                            }}
+                          >
+                            ₦3,900
+                          </Typography>
+                        </CurrentPriceContainer>
+
+                        <OriginalPriceContainer>
+                          <OriginalPriceText>
+                            <s>
+                              <Typography
+                                sx={{
+                                  fontWeight: 400,
+                                  fontSize: "14px",
+                                  lineHeight: 1,
+                                  whiteSpace: "nowrap",
+                                  color: "secondary.light",
+                                  margin: 0,
+                                  padding: 0,
+                                }}
+                              >
+                                ₦17,500
+                              </Typography>
+                            </s>
+                          </OriginalPriceText>
+                        </OriginalPriceContainer>
+                      </PriceTextContainer>
+
+                      <AuthorCourseBadgeContainer>
+                        <Typography
+                          sx={{
+                            margin: 0,
+                            fontWeight: 700,
+                            lineHeight: 1.2,
+                            letterSpacing: "-0.2px",
+                            fontSize: "12px",
+                            display: "flex",
+                            alignItems: "center",
+                            padding: "4px 8px",
+                            whiteSpace: "nowrap",
+                            backgroundColor: "#eceb98",
+                            color: "#3d3c0a",
+                          }}
+                        >
+                          Bestseller
+                        </Typography>
+                      </AuthorCourseBadgeContainer>
                     </AuthorCourseCardContainer>
                   </ScrollItemContainer>
-                </ScrollItemCourseCardCarousel>
+                </ScrollItemCourseCardCarousel> */}
               </DiscoveryCourseCardCarousel>
 
               <DiscoveryCarouselBackButton>

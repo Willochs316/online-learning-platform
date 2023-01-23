@@ -92,8 +92,8 @@ export const BillBoardBannerContainer = styled("div")({
 
 export const CarouselInner = styled("div")({
   display: "flex",
-  transition: 'ease 1s',
-})
+  transition: "ease 1s",
+});
 
 export const BillboardContentBox = styled("div")({
   fontWeight: 400,
@@ -377,7 +377,9 @@ export const ScrollItemCourseCardCarousel = styled("div")({
   margin: 0,
   padding: 0,
   minWidth: "1px",
-  width: 245.59,
+  width: "100%",
+  height: 290.52,
+  maxWidth: 245.59,
   scrollSnapAlign: "start",
 });
 
@@ -417,6 +419,7 @@ export const ImageContainer = styled("div")({
 
 export const AuthorCourseCardContainer = styled("div")({
   display: "flex",
+  flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
   fontFamily:
@@ -469,6 +472,7 @@ export const AuthorCourseAnchorTag = styled("a")({
   color: "#1c1d1f",
   fontWeight: "inherit",
   width: "100%",
+  textDecoration: "none",
 });
 
 export const AuthorCourseHeaderTitle = styled("div")({

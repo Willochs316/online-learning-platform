@@ -4,6 +4,7 @@ import { Provider } from "react-redux";
 import store from "./store";
 import App from "./App";
 import "./index.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
 import { orange } from "@mui/material/colors";
 

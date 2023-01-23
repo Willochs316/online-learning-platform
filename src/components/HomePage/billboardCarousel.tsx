@@ -3,7 +3,7 @@ import { BillboardContentBox, CarouselInner } from "./homePage.styled";
 import { Typography } from "@mui/material";
 
 interface homeProps {
-  images?: any;
+  images: any[];
   currentBillboard?: any;
 }
 
@@ -14,11 +14,8 @@ export const BillboardCarousel: React.FunctionComponent<homeProps> = (
 
   return (
     <>
-      {images.map((image: any, index: 0) => (
-        <CarouselInner
-          style={{ transform: `translate(${-currentBillboard * 100}%)` }}
-          key={index}
-        >
+      {images.map((image: any[], index: number) => (
+        <CarouselInner key={index}>
           <img
             width="1340"
             height="400"
