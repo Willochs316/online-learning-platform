@@ -2,34 +2,19 @@ import * as React from "react";
 import {
   TopBillBoardCarousel,
   TopCarouselItems,
-  ScrollItemCourseCardCarousel,
   CourseDiscoveryContent,
-  AuthorCourseCardContainer,
-  AuthorCourseHeaderTitle,
-  AuthorCourseAnchorTag,
-  AuthorCourseDetails,
-  DiscoveryCourseCardCarousel,
-  DiscoveryCarouselBackButton,
-  DiscoveryCarouselForwardButton,
+  CourseUnitGridCarousel,
+  CourseCarouselBackButton,
+  CourseCarouselForwardButton,
   CourseDiscoveryContainer,
   TopHomePageBillboardCarousel,
   AppHomeDataContent,
   CourseViewAnchorTag,
   CourseViewedTitle,
   DiscoveryCourseParagraph,
-  ImageContainer,
-  DiscoveryCourseCardContainer,
-  ScrollItemContainer,
+  CourseCarouselContainer,
   Span,
   AppHomePageWrapper,
-  AuthorTitleContainer,
-  CourseCardStarRate,
-  StarRatingContainer,
-  PriceTextContainer,
-  CurrentPriceContainer,
-  OriginalPriceContainer,
-  OriginalPriceText,
-  AuthorCourseBadgeContainer,
   BillBoardBannerContainer,
   BillboardBackButton,
   BillboardForwardButton,
@@ -37,9 +22,6 @@ import {
 import ArrowBackIosNewOutlinedIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 import WebRtc from "../../assets/images/web-rtc.jpeg";
-import GradeIcon from "@mui/icons-material/Grade";
-import StarHalfIcon from "@mui/icons-material/StarHalf";
-import { Image } from "../../common/Image";
 import { Typography } from "@mui/material";
 import { BillboardCarousel } from "./billboardCarousel";
 import firstBillboard from "../../assets/images/first-billboard-banner.jpg";
@@ -72,8 +54,7 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
   const courseCard = [
     {
       img: `${WebRtc}`,
-      title: "Discord Clone - Learn MERN",
-      subtitle: "Stack with WebRTC and SocketIO",
+      title: "Discord Clone - Learn MERN Stack with WebRTC and SocketIO",
       instructor: "Marek Gryszkiewicz",
       rate: "4.6",
       rateNum: "(124)",
@@ -84,8 +65,7 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
 
     {
       img: `${WebRtc}`,
-      title: "Software Engineering 101: Plan",
-      subtitle: "and Execute Better Software.",
+      title: "Software Engineering 101: Plan ",
       instructor: "Kurt Anderson",
       rate: "4.5",
       rateNum: "(8,818)",
@@ -196,204 +176,19 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
               </CourseViewedTitle>
             </DiscoveryCourseParagraph>
 
-            <DiscoveryCourseCardContainer>
-              <DiscoveryCourseCardCarousel>
+            <CourseCarouselContainer>
+              <CourseUnitGridCarousel>
                 <CourseCardCarousel courseCard={courseCard} />
+              </CourseUnitGridCarousel>
 
-                {/* <ScrollItemCourseCardCarousel>
-                  <ScrollItemContainer>
-                    <ImageContainer>
-                      <Image
-                        src={WebRtc}
-                        className={"courseCardImage"}
-                        alt="Course Card Image"
-                      />
-                    </ImageContainer>
-
-                    <AuthorCourseCardContainer>
-                      <AuthorCourseDetails>
-                        <AuthorCourseAnchorTag>
-                          <AuthorCourseHeaderTitle>
-                            <Typography
-                              variant="subtitle2"
-                              sx={{ letterSpacing: "-.2px", lineHeight: 1.2 }}
-                            >
-                              Discord Clone - Learn MERN
-                            </Typography>
-                            <Typography
-                              variant="subtitle2"
-                              sx={{
-                                whiteSpace: "nowrap",
-                                overflow: "hidden",
-                                textOverflow: "ellipsis",
-                                width: "80%",
-                                letterSpacing: "-.2px",
-                                lineHeight: 1.2,
-                              }}
-                            >
-                              Stack with WebRTC and SocketIO
-                            </Typography>
-                          </AuthorCourseHeaderTitle>
-                        </AuthorCourseAnchorTag>
-                      </AuthorCourseDetails>
-
-                      <AuthorTitleContainer>
-                        <Typography
-                          sx={{
-                            color: "secondary.light",
-                            fontWeight: 400,
-                            lineHeight: 1.4,
-                            fontSize: "12px",
-                            margin: 0,
-                            padding: 0,
-                            display: "flex",
-                            overflow: "hidden",
-                            textOverflow: "ellipsis",
-                            whiteSpace: "normal",
-                          }}
-                        >
-                          Marek Gryszkiewicz
-                        </Typography>
-                      </AuthorTitleContainer>
-
-                      <CourseCardStarRate>
-                        <StarRatingContainer>
-                          <Typography
-                            sx={{
-                              margin: 0,
-                              padding: 0,
-                              fontWeight: 700,
-                              lineHeight: 1.2,
-                              letterSpacing: "-0.2px",
-                              fontSize: "14px",
-                              marginRight: "4px",
-                              color: "#b4690e",
-                            }}
-                          >
-                            4.6
-                          </Typography>
-
-                          <GradeIcon
-                            sx={{
-                              color: "#E5981A",
-                              width: "12px",
-                              height: "12px",
-                            }}
-                          />
-                          <GradeIcon
-                            sx={{
-                              color: "#E5981A",
-                              width: "12px",
-                              height: "12px",
-                            }}
-                          />
-                          <GradeIcon
-                            sx={{
-                              color: "#E5981A",
-                              width: "12px",
-                              height: "12px",
-                            }}
-                          />
-                          <GradeIcon
-                            sx={{
-                              color: "#E5981A",
-                              width: "12px",
-                              height: "12px",
-                            }}
-                          />
-                          <StarHalfIcon
-                            sx={{
-                              color: "#E5981A",
-                              width: "12px",
-                              height: "12px",
-                            }}
-                          />
-                          <Typography
-                            sx={{
-                              color: "secondary.light",
-                              whiteSpace: "nowrap",
-                              margin: 0,
-                              padding: 0,
-                              fontWeight: 400,
-                              lineHeight: 1.4,
-                              fontSize: "12px",
-                              marginLeft: "4px",
-                            }}
-                          >
-                            (124)
-                          </Typography>
-                        </StarRatingContainer>
-                      </CourseCardStarRate>
-
-                      <PriceTextContainer>
-                        <CurrentPriceContainer>
-                          <Typography
-                            variant="subtitle2"
-                            sx={{
-                              letterSpacing: "-0.2px",
-                              lineHeight: 1,
-                              whiteSpace: "nowrap",
-                              margin: 0,
-                              padding: 0,
-                            }}
-                          >
-                            ₦3,900
-                          </Typography>
-                        </CurrentPriceContainer>
-
-                        <OriginalPriceContainer>
-                          <OriginalPriceText>
-                            <s>
-                              <Typography
-                                sx={{
-                                  fontWeight: 400,
-                                  fontSize: "14px",
-                                  lineHeight: 1,
-                                  whiteSpace: "nowrap",
-                                  color: "secondary.light",
-                                  margin: 0,
-                                  padding: 0,
-                                }}
-                              >
-                                ₦17,500
-                              </Typography>
-                            </s>
-                          </OriginalPriceText>
-                        </OriginalPriceContainer>
-                      </PriceTextContainer>
-
-                      <AuthorCourseBadgeContainer>
-                        <Typography
-                          sx={{
-                            margin: 0,
-                            fontWeight: 700,
-                            lineHeight: 1.2,
-                            letterSpacing: "-0.2px",
-                            fontSize: "12px",
-                            display: "flex",
-                            alignItems: "center",
-                            padding: "4px 8px",
-                            whiteSpace: "nowrap",
-                            backgroundColor: "#eceb98",
-                            color: "#3d3c0a",
-                          }}
-                        >
-                          Bestseller
-                        </Typography>
-                      </AuthorCourseBadgeContainer>
-                    </AuthorCourseCardContainer>
-                  </ScrollItemContainer>
-                </ScrollItemCourseCardCarousel> */}
-              </DiscoveryCourseCardCarousel>
-
-              <DiscoveryCarouselBackButton>
+              <CourseCarouselBackButton>
                 <ArrowBackIosNewOutlinedIcon />
-              </DiscoveryCarouselBackButton>
+              </CourseCarouselBackButton>
 
-              <DiscoveryCarouselForwardButton>
+              <CourseCarouselForwardButton>
                 <ArrowForwardIosOutlinedIcon />
-              </DiscoveryCarouselForwardButton>
-            </DiscoveryCourseCardContainer>
+              </CourseCarouselForwardButton>
+            </CourseCarouselContainer>
           </CourseDiscoveryContent>
         </CourseDiscoveryContainer>
       </AppHomeDataContent>

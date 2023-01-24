@@ -1,47 +1,24 @@
 import * as React from "react";
 import {
-  TopBillBoardCarousel,
-  TopCarouselItems,
-  ScrollItemCourseCardCarousel,
-  CourseDiscoveryContent,
-  AuthorCourseCardContainer,
-  AuthorCourseHeaderTitle,
-  AuthorCourseAnchorTag,
-  AuthorCourseDetails,
-  DiscoveryCourseCardCarousel,
-  DiscoveryCarouselBackButton,
-  DiscoveryCarouselForwardButton,
-  CourseDiscoveryContainer,
-  TopHomePageBillboardCarousel,
-  AppHomeDataContent,
-  CourseViewAnchorTag,
-  CourseViewedTitle,
-  DiscoveryCourseParagraph,
-  ImageContainer,
-  DiscoveryCourseCardContainer,
+  CourseCarouselScrollItem,
+  CourseCardMainContent,
+  CourseTitleAnchorTag,
+  CourseTitleContainer,
+  CourseCardImageContainer,
   ScrollItemContainer,
-  Span,
-  AppHomePageWrapper,
-  AuthorTitleContainer,
+  CourseInstructorContainer,
   CourseCardStarRate,
   StarRatingContainer,
   PriceTextContainer,
   CurrentPriceContainer,
   OriginalPriceContainer,
   OriginalPriceText,
-  AuthorCourseBadgeContainer,
-  BillBoardBannerContainer,
-  BillboardBackButton,
-  BillboardForwardButton,
+  CourseBadgeContainer,
 } from "./homePage.styled";
-import ArrowBackIosNewOutlinedIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
-import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
-import WebRtc from "../../assets/images/web-rtc.jpeg";
 import GradeIcon from "@mui/icons-material/Grade";
 import StarHalfIcon from "@mui/icons-material/StarHalf";
 import { Image } from "../../common/Image";
 import { Typography } from "@mui/material";
-import { BillboardCarousel } from "./billboardCarousel";
 
 interface CourseCardCarousel {
   courseCard: any[];
@@ -55,44 +32,30 @@ export const CourseCardCarousel: React.FunctionComponent<CourseCardCarousel> = (
   return (
     <>
       {courseCard.map((card, index) => (
-        <ScrollItemCourseCardCarousel>
+        <CourseCarouselScrollItem>
           <ScrollItemContainer>
-            <ImageContainer>
+            <CourseCardImageContainer>
               <Image
                 src={card.img}
                 className={"courseCardImage"}
                 alt="Course Card Image"
               />
-            </ImageContainer>
+            </CourseCardImageContainer>
 
-            <AuthorCourseCardContainer>
-              <AuthorCourseDetails>
-                <AuthorCourseAnchorTag>
-                  <AuthorCourseHeaderTitle>
-                    <Typography
-                      variant="subtitle2"
-                      sx={{ letterSpacing: "-.2px", lineHeight: 1.2 }}
-                    >
-                      {card.title}
-                    </Typography>
-                    <Typography
-                      variant="subtitle2"
-                      sx={{
-                        whiteSpace: "nowrap",
-                        overflow: "hidden",
-                        textOverflow: "ellipsis",
-                        // width: "80%",
-                        letterSpacing: "-.2px",
-                        lineHeight: 1.2,
-                      }}
-                    >
-                      {card.subtitle}
-                    </Typography>
-                  </AuthorCourseHeaderTitle>
-                </AuthorCourseAnchorTag>
-              </AuthorCourseDetails>
+            <CourseCardMainContent>
+              <CourseTitleContainer>
+                <CourseTitleAnchorTag
+                  sx={{
+                    ":hover": {
+                      color: "#1c1d1f",
+                    },
+                  }}
+                >
+                  {card.title}
+                </CourseTitleAnchorTag>
+              </CourseTitleContainer>
 
-              <AuthorTitleContainer>
+              <CourseInstructorContainer>
                 <Typography
                   sx={{
                     color: "secondary.light",
@@ -109,7 +72,7 @@ export const CourseCardCarousel: React.FunctionComponent<CourseCardCarousel> = (
                 >
                   {card.instructor}
                 </Typography>
-              </AuthorTitleContainer>
+              </CourseInstructorContainer>
 
               <CourseCardStarRate>
                 <StarRatingContainer>
@@ -217,7 +180,7 @@ export const CourseCardCarousel: React.FunctionComponent<CourseCardCarousel> = (
                 </OriginalPriceContainer>
               </PriceTextContainer>
 
-              <AuthorCourseBadgeContainer>
+              <CourseBadgeContainer>
                 <Typography
                   sx={{
                     margin: 0,
@@ -233,12 +196,12 @@ export const CourseCardCarousel: React.FunctionComponent<CourseCardCarousel> = (
                     color: "#3d3c0a",
                   }}
                 >
-                  Bestseller
+                  {card.bestSeller}
                 </Typography>
-              </AuthorCourseBadgeContainer>
-            </AuthorCourseCardContainer>
+              </CourseBadgeContainer>
+            </CourseCardMainContent>
           </ScrollItemContainer>
-        </ScrollItemCourseCardCarousel>
+        </CourseCarouselScrollItem>
       ))}
     </>
   );
