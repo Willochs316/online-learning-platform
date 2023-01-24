@@ -30,3 +30,8 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
+
+.ud-icon{
+  width: 200px;
+  color:blue
+}
