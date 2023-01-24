@@ -4,7 +4,7 @@ import { Typography } from "@mui/material";
 
 interface homeProps {
   images: any[];
-  currentBillboard?: any;
+  currentBillboard: number;
 }
 
 export const BillboardCarousel: React.FunctionComponent<homeProps> = (
