@@ -22,11 +22,18 @@ import {
 import ArrowBackIosNewOutlinedIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 import WebRtc from "../../assets/images/web-rtc.jpeg";
+import Ather from "../../assets/images/ather.jpeg";
+import OakAcademy from "../../assets/images/oak-academy.jpeg";
+import RustyZone from "../../assets/images/rusty-zone.jpeg";
+import Rusty from "../../assets/images/rusty.jpeg";
 import { Typography } from "@mui/material";
 import { BillboardCarousel } from "./billboardCarousel";
 import firstBillboard from "../../assets/images/first-billboard-banner.jpg";
 import secondBillboard from "../../assets/images/second-billboard-banner.jpg";
 import { CourseCardCarousel } from "./CourseCard";
+import StarFilledIcon from "../../assets/svgs/star-filled-rate.svg";
+import StarHalfIcon from "../../assets/svgs/star-half-rate.svg";
+import StarOutlineIcon from "../../assets/svgs/star-rate-rating-outline.svg";
 
 interface HomeProps {}
 
@@ -60,19 +67,67 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
       rateNum: "(124)",
       currentPrice: "₦3,900",
       originalPrice: "₦17,500",
-      bestSeller: "Bestseller",
+      bestSeller: true,
+      starfilled: StarFilledIcon,
+      starhalf: StarHalfIcon,
     },
 
     {
-      img: `${WebRtc}`,
-      title: "Software Engineering 101: Plan ",
-      instructor: "Kurt Anderson",
+      img: `${OakAcademy}`,
+      title: "React Native From Scratch with Hooks and Context",
+      instructor: "Oak Academy",
       rate: "4.5",
-      rateNum: "(8,818)",
-      currentPrice: "₦10,500",
-      bestSeller: "Bestseller",
+      rateNum: "(33)",
+      currentPrice: "₦3,900",
+      originalPrice: "",
+      bestSeller: false,
+      starfilled: StarFilledIcon,
+      starhalf: StarHalfIcon,
+    },
+
+    {
+      img: `${Ather}`,
+      title: "React Native Chat App with Firebase - Firestore Course 2020",
+      instructor: "Usaid Ather",
+      rate: "3.6",
+      rateNum: "(56)",
+      currentPrice: "₦3,200",
+      originalPrice: "₦4,500",
+      bestSeller: false,
+      starfilled: StarFilledIcon,
+      staroutline: StarOutlineIcon,
+    },
+
+    {
+      img: `${RustyZone}`,
+      title: "Build the original Instagram with React Native & Firebase",
+      instructor: "Rusty Zone",
+      rate: "3.9",
+      rateNum: "(195)",
+      currentPrice: "₦3,900",
+      originalPrice: "₦5,500",
+      bestSeller: true,
+      starfilled: StarFilledIcon,
+      staroutline: StarOutlineIcon,
+    },
+
+    {
+      img: `${Rusty}`,
+      title: "Build your first app with React Native",
+      instructor: "Rusty Zone",
+      rate: "4.1",
+      rateNum: "(44)",
+      currentPrice: "₦3,200",
+      originalPrice: "₦4,500",
+      bestSeller: false,
+      starfilled: StarFilledIcon,
+      staroutline: StarOutlineIcon,
     },
   ];
+
+  const bestSelling = courseCard.filter((obj) => obj.bestSeller);
+
+  console.log(bestSelling ? true : false, "hello world");
 
   const handlePrev = () => {
     const index =
@@ -149,7 +204,8 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
                           },
                         }}
                       >
-                        Create a Netflix clone from Scratch: JavaScript
+                        How to Build an Instagram Clone w/ React Native
+                        {/* Create a Netflix clone from Scratch: JavaScript */}
                       </Typography>
                     </Span>
                   </CourseViewAnchorTag>
@@ -167,7 +223,7 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
                           },
                         }}
                       >
-                        PHP + MySQL
+                        & Firebase
                       </Typography>
                     </Span>
                   </CourseViewAnchorTag>
@@ -178,7 +234,10 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
 
             <CourseCarouselContainer>
               <CourseUnitGridCarousel>
-                <CourseCardCarousel courseCard={courseCard} />
+                <CourseCardCarousel
+                  courseCard={courseCard}
+                  bestSelling={bestSelling}
+                />
               </CourseUnitGridCarousel>
 
               <CourseCarouselBackButton>

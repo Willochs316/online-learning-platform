@@ -283,7 +283,6 @@ export const CourseCarouselContainer = styled("div")({
   padding: 0,
   position: "relative",
   width: "100%",
-  backgroundColor: "#fffdef",
 });
 
 export const CourseUnitGridCarousel = styled("div")({
@@ -410,8 +409,22 @@ export const CourseCardImageContainer = styled("div")({
   border: "1px solid #d1d7dc",
   overflow: "hidden",
   position: "relative",
-  width: 245.59,
   height: 138.14,
+  paddingBottom: "56.25%",
+  width: "100%",
+});
+
+export const CourseCardImage = styled("img")({
+  color: "#1c1d1f",
+  aspectratio: "auto 240 / 135",
+  margin: 0,
+  padding: 0,
+  maxWidth: "100%",
+  display: "block",
+  transition: "opacity linear 100ms",
+  position: "absolute",
+  width: "100%",
+  height: "100%",
 });
 
 export const CourseCardMainContent = styled("div")({
@@ -464,16 +477,14 @@ export const CourseTitleAnchorTag = styled("a")({
   fontFamily:
     "udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
   lineHeight: 1.2,
-  letterSpacing: "-.2px",
+  letterSpacing: "-0.02rem",
   fontSize: "16px",
   whiteSpace: "normal",
   margin: 0,
   padding: 0,
   color: "#1c1d1f",
   fontWeight: "inherit",
-  width: 233.65,
   height: 39.7,
-  maxWidth: "600px",
   textDecoration: "none",
 });
 
@@ -517,7 +528,59 @@ export const StarRatingContainer = styled("span")({
   padding: 0,
   display: "flex",
   alignItems: "center",
-  width: "100%",
+  // width: "100%",
+
+  width: 94.17,
+});
+
+export const CourseCardRateNum = styled("span")({
+  display: "flex",
+  whiteSpace: "nowrap",
+  margin: 0,
+  padding: 0,
+  fontFamily:
+    "udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+  fontWeight: 700,
+  lineHeight: 1.2,
+  letterSpacing: "-0.2px",
+  fontSize: "14px",
+  marginRight: "4px",
+  color: "#b4690e",
+});
+
+export const StarIconContent = styled("div")({
+  display: "flex",
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "16px",
+  color: "#1c1d1f",
+  whiteSpace: "nowrap",
+  fill: "none",
+  margin: 0,
+  padding: 0,
+  width: "70px",
+  height: "16px",
+});
+
+export const RateIcon = styled("img")({
+  display: "block",
+  color: "#E5981A",
+  width: "14px",
+  height: "14px",
+});
+
+export const RateNumContent = styled("span")({
+  display: "flex",
+  alignItems: "center",
+  margin: 0,
+  padding: 0,
+  fontFamily:
+    "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "12px",
+  color: "#6a6f73",
+  marginLeft: "4px",
 });
 
 export const PriceTextContainer = styled("div")({

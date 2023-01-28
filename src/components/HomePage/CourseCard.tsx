@@ -14,20 +14,34 @@ import {
   OriginalPriceContainer,
   OriginalPriceText,
   CourseBadgeContainer,
+  CourseCardImage,
+  RateIcon,
+  StarIconContent,
+  RateNumContent,
+  CourseCardRateNum,
 } from "./homePage.styled";
+
 import GradeIcon from "@mui/icons-material/Grade";
-import StarHalfIcon from "@mui/icons-material/StarHalf";
-import { Image } from "../../common/Image";
+// import StarHalfIcon from "@mui/icons-material/StarHalf";
 import { Typography } from "@mui/material";
 
 interface CourseCardCarousel {
   courseCard: any[];
+  bestSelling: any;
 }
 
 export const CourseCardCarousel: React.FunctionComponent<CourseCardCarousel> = (
   props
 ) => {
-  const { courseCard } = props;
+  const { courseCard, bestSelling } = props;
+
+  // const courseRating = [
+  //   {
+  //     starfilled: StarFilledIcon,
+  //     starhalf: StarHalfIcon,
+  //     staroutline: StarOutlineIcon,
+  //   },
+  // ];
 
   return (
     <>
@@ -35,11 +49,7 @@ export const CourseCardCarousel: React.FunctionComponent<CourseCardCarousel> = (
         <CourseCarouselScrollItem>
           <ScrollItemContainer>
             <CourseCardImageContainer>
-              <Image
-                src={card.img}
-                className={"courseCardImage"}
-                alt="Course Card Image"
-              />
+              <CourseCardImage src={card.img} alt="Course Card Image" />
             </CourseCardImageContainer>
 
             <CourseCardMainContent>
@@ -76,71 +86,18 @@ export const CourseCardCarousel: React.FunctionComponent<CourseCardCarousel> = (
 
               <CourseCardStarRate>
                 <StarRatingContainer>
-                  <Typography
-                    sx={{
-                      margin: 0,
-                      padding: 0,
-                      fontWeight: 700,
-                      lineHeight: 1.2,
-                      letterSpacing: "-0.2px",
-                      fontSize: "14px",
-                      marginRight: "4px",
-                      color: "#b4690e",
-                    }}
-                  >
-                    {card.rate}
-                  </Typography>
+                  <CourseCardRateNum>{card.rate}</CourseCardRateNum>
 
-                  <GradeIcon
-                    sx={{
-                      color: "#E5981A",
-                      width: "12px",
-                      height: "12px",
-                    }}
-                  />
-                  <GradeIcon
-                    sx={{
-                      color: "#E5981A",
-                      width: "12px",
-                      height: "12px",
-                    }}
-                  />
-                  <GradeIcon
-                    sx={{
-                      color: "#E5981A",
-                      width: "12px",
-                      height: "12px",
-                    }}
-                  />
-                  <GradeIcon
-                    sx={{
-                      color: "#E5981A",
-                      width: "12px",
-                      height: "12px",
-                    }}
-                  />
-                  <StarHalfIcon
-                    sx={{
-                      color: "#E5981A",
-                      width: "12px",
-                      height: "12px",
-                    }}
-                  />
-                  <Typography
-                    sx={{
-                      color: "secondary.light",
-                      whiteSpace: "nowrap",
-                      margin: 0,
-                      padding: 0,
-                      fontWeight: 400,
-                      lineHeight: 1.4,
-                      fontSize: "12px",
-                      marginLeft: "4px",
-                    }}
-                  >
-                    {card.rateNum}
-                  </Typography>
+                  <StarIconContent>
+                    <RateIcon src={card.starfilled} alt="" />
+                    <RateIcon src={card.starfilled} alt="" />
+                    <RateIcon src={card.starfilled} alt="" />
+                    <RateIcon src={card.starfilled} alt="" />
+                    <RateIcon src={card.starhalf} alt="" />
+                  </StarIconContent>
                 </StarRatingContainer>
+
+                <RateNumContent>{card.rateNum}</RateNumContent>
               </CourseCardStarRate>
 
               <PriceTextContainer>
@@ -180,25 +137,27 @@ export const CourseCardCarousel: React.FunctionComponent<CourseCardCarousel> = (
                 </OriginalPriceContainer>
               </PriceTextContainer>
 
-              <CourseBadgeContainer>
-                <Typography
-                  sx={{
-                    margin: 0,
-                    fontWeight: 700,
-                    lineHeight: 1.2,
-                    letterSpacing: "-0.2px",
-                    fontSize: "12px",
-                    display: "flex",
-                    alignItems: "center",
-                    padding: "4px 8px",
-                    whiteSpace: "nowrap",
-                    backgroundColor: "#eceb98",
-                    color: "#3d3c0a",
-                  }}
-                >
-                  {card.bestSeller}
-                </Typography>
-              </CourseBadgeContainer>
+              {card.bestSeller ? (
+                <CourseBadgeContainer>
+                  <Typography
+                    sx={{
+                      margin: 0,
+                      fontWeight: 700,
+                      lineHeight: 1.2,
+                      letterSpacing: "-0.2px",
+                      fontSize: "12px",
+                      display: "flex",
+                      alignItems: "center",
+                      padding: "4px 8px",
+                      whiteSpace: "nowrap",
+                      backgroundColor: "#eceb98",
+                      color: "#3d3c0a",
+                    }}
+                  >
+                    Bestseller
+                  </Typography>
+                </CourseBadgeContainer>
+              ) : null}
             </CourseCardMainContent>
           </ScrollItemContainer>
         </CourseCarouselScrollItem>

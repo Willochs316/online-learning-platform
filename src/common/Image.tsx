@@ -3,7 +3,7 @@ import React from "react";
 interface TextProps {
   src: any;
   alt: string;
- className: string
+  className: string;
 }
 
 export const Image: React.FunctionComponent<TextProps> = (props) => {
