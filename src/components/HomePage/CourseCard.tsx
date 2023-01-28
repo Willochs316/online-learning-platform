@@ -20,20 +20,17 @@ import {
   RateNumContent,
   CourseCardRateNum,
 } from "./homePage.styled";
-
-import GradeIcon from "@mui/icons-material/Grade";
-// import StarHalfIcon from "@mui/icons-material/StarHalf";
 import { Typography } from "@mui/material";
+import staroutline from "../../assets/svgs/star-rate-rating-outline.svg";
 
 interface CourseCardCarousel {
   courseCard: any[];
-  bestSelling: any;
 }
 
 export const CourseCardCarousel: React.FunctionComponent<CourseCardCarousel> = (
   props
 ) => {
-  const { courseCard, bestSelling } = props;
+  const { courseCard } = props;
 
   return (
     <>
@@ -85,7 +82,12 @@ export const CourseCardCarousel: React.FunctionComponent<CourseCardCarousel> = (
                     <RateIcon src={card.starfilled} alt="" />
                     <RateIcon src={card.starfilled} alt="" />
                     <RateIcon src={card.starfilled} alt="" />
-                    <RateIcon src={card.starhalf} alt="" />
+
+                    {card.staroutline ? (
+                      <RateIcon src={staroutline} alt="" />
+                    ) : (
+                      <RateIcon src={card.starhalf} alt="" />
+                    )}
                   </StarIconContent>
                 </StarRatingContainer>
 

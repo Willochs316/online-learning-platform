@@ -95,7 +95,7 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
       originalPrice: "₦4,500",
       bestSeller: false,
       starfilled: StarFilledIcon,
-      staroutline: StarOutlineIcon,
+      staroutline: true,
     },
 
     {
@@ -108,7 +108,7 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
       originalPrice: "₦5,500",
       bestSeller: false,
       starfilled: StarFilledIcon,
-      staroutline: StarOutlineIcon,
+      staroutline: true,
     },
 
     {
@@ -121,13 +121,9 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
       originalPrice: "₦4,500",
       bestSeller: false,
       starfilled: StarFilledIcon,
-      staroutline: StarOutlineIcon,
+      staroutline: true,
     },
   ];
-
-  const bestSelling = courseCard.filter((obj) => obj.bestSeller);
-
-  console.log(bestSelling ? true : false, "hello world");
 
   const handlePrev = () => {
     const index =
@@ -234,10 +230,7 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
 
             <CourseCarouselContainer>
               <CourseUnitGridCarousel>
-                <CourseCardCarousel
-                  courseCard={courseCard}
-                  bestSelling={bestSelling}
-                />
+                <CourseCardCarousel courseCard={courseCard} />
               </CourseUnitGridCarousel>
 
               <CourseCarouselBackButton>
