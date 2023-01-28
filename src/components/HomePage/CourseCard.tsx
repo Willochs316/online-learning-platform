@@ -35,14 +35,6 @@ export const CourseCardCarousel: React.FunctionComponent<CourseCardCarousel> = (
 ) => {
   const { courseCard, bestSelling } = props;
 
-  // const courseRating = [
-  //   {
-  //     starfilled: StarFilledIcon,
-  //     starhalf: StarHalfIcon,
-  //     staroutline: StarOutlineIcon,
-  //   },
-  // ];
-
   return (
     <>
       {courseCard.map((card, index) => (

@@ -106,7 +106,7 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
       rateNum: "(195)",
       currentPrice: "₦3,900",
       originalPrice: "₦5,500",
-      bestSeller: true,
+      bestSeller: false,
       starfilled: StarFilledIcon,
       staroutline: StarOutlineIcon,
     },
