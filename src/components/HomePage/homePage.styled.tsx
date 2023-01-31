@@ -458,22 +458,21 @@ export const CourseTitleContainer = styled("h3")({
     "udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
   fontWeight: 700,
   lineHeight: 1.2,
-  letterSpacing: "-.2px",
+  letterSpacing: "-0.02rem",
   fontSize: "16px",
-  whiteSpace: "normal",
+  whiteSpace: "nowrap",
   overflow: "hidden",
   textOverflow: "ellipsis",
   marginBottom: "4px",
   marginTop: "8px",
   width: "245.59px",
-  height: 38.39,
   maxWidth: "600px",
 });
 
 export const CourseTitleAnchorTag = styled("a")({
   display: "flex",
   alignItems: "baseline",
-  justifyContent: "flex-start",
+  justifyContent: "center",
   fontFamily:
     "udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
   lineHeight: 1.2,
@@ -484,7 +483,6 @@ export const CourseTitleAnchorTag = styled("a")({
   padding: 0,
   color: "#1c1d1f",
   fontWeight: "inherit",
-  height: 39.7,
   textDecoration: "none",
 });
 

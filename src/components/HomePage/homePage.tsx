@@ -26,14 +26,18 @@ import Ather from "../../assets/images/ather.jpeg";
 import OakAcademy from "../../assets/images/oak-academy.jpeg";
 import RustyZone from "../../assets/images/rusty-zone.jpeg";
 import Rusty from "../../assets/images/rusty.jpeg";
+import Alawi from "../../assets/images/alawi.jpeg";
+import Mohan from "../../assets/images/mohan.jpeg";
+import Chen from "../../assets/images/chen.jpeg";
+import Wizard from "../../assets/images/wizard-courses.jpeg";
+import Bakery from "../../assets/images/skillbakery.jpeg";
+import Skup from "../../assets/images/antoni.jpeg";
 import { Typography } from "@mui/material";
 import { BillboardCarousel } from "./billboardCarousel";
 import firstBillboard from "../../assets/images/first-billboard-banner.jpg";
 import secondBillboard from "../../assets/images/second-billboard-banner.jpg";
 import { CourseCardCarousel } from "./CourseCard";
 import StarFilledIcon from "../../assets/svgs/star-filled-rate.svg";
-import StarHalfIcon from "../../assets/svgs/star-half-rate.svg";
-import StarOutlineIcon from "../../assets/svgs/star-rate-rating-outline.svg";
 
 interface HomeProps {}
 
@@ -61,7 +65,7 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
   const courseCard = [
     {
       img: `${WebRtc}`,
-      title: "Discord Clone - Learn MERN Stack with WebRTC and SocketIO",
+      title: "Discord Clone - Learn MERN Stack with WebRTC and...",
       instructor: "Marek Gryszkiewicz",
       rate: "4.6",
       rateNum: "(124)",
@@ -126,6 +130,90 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
       bestSeller: false,
       starfilled: StarFilledIcon,
       starhalf: true,
+      staroutline: false,
+    },
+
+    {
+      img: `${Alawi}`,
+      title: "Build Instagram Clone Using HTML & CSS",
+      instructor: "Mustafa Alawi",
+      rate: "3.6",
+      rateNum: "(5)",
+      currentPrice: "₦3,500",
+      originalPrice: "₦4,500",
+      bestSeller: false,
+      starfilled: StarFilledIcon,
+      starhalf: false,
+      staroutline: false,
+    },
+
+    {
+      img: `${Mohan}`,
+      title: "React Native - First Steps",
+      instructor: "Mehul Mohan",
+      rate: "4.4",
+      rateNum: "(26)",
+      currentPrice: "₦3,500",
+      originalPrice: "₦4,500",
+      bestSeller: false,
+      starfilled: StarFilledIcon,
+      starhalf: false,
+      staroutline: true,
+    },
+
+    {
+      img: `${Chen}`,
+      title: "React Native Expo for multiplatform mobile app...",
+      instructor: "Kim Chen",
+      rate: "4.2",
+      rateNum: "(467)",
+      currentPrice: "₦3,500",
+      originalPrice: "₦13,500",
+      bestSeller: false,
+      starfilled: StarFilledIcon,
+      starhalf: true,
+      staroutline: false,
+    },
+
+    {
+      img: `${Wizard}`,
+      title: "React Native with Redux, Firebase, GCP and more.",
+      instructor: "Wizard Courses",
+      rate: "3.2",
+      rateNum: "(11)",
+      currentPrice: "₦3,900",
+      originalPrice: "₦5,500",
+      bestSeller: false,
+      starfilled: StarFilledIcon,
+      starhalf: true,
+      staroutline: false,
+    },
+
+    {
+      img: `${Bakery}`,
+      title: "React Native: Build Native Mobile Applications",
+      instructor: "SkillBakery Studio",
+      rate: "3.4",
+      rateNum: "(23)",
+      currentPrice: "₦4,500",
+      originalPrice: "₦8,500",
+      bestSeller: false,
+      starfilled: StarFilledIcon,
+      starhalf: false,
+      staroutline: false,
+    },
+
+    {
+      img: `${Skup}`,
+      title: "React Native bootcamp - Build an Instagram Clone w/Firebase",
+      instructor: "Antonio Skup",
+      rate: "3.5",
+      rateNum: "(204)",
+      currentPrice: "₦3,500",
+      originalPrice: "₦13,900",
+      bestSeller: false,
+      starfilled: StarFilledIcon,
+      starhalf: false,
       staroutline: false,
     },
   ];
