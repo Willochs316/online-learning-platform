@@ -69,7 +69,8 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
       originalPrice: "₦17,500",
       bestSeller: true,
       starfilled: StarFilledIcon,
-      starhalf: StarHalfIcon,
+      starhalf: true,
+      staroutline: true,
     },
 
     {
@@ -82,7 +83,8 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
       originalPrice: "",
       bestSeller: false,
       starfilled: StarFilledIcon,
-      starhalf: StarHalfIcon,
+      starhalf: true,
+      staroutline: true,
     },
 
     {
@@ -95,7 +97,8 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
       originalPrice: "₦4,500",
       bestSeller: false,
       starfilled: StarFilledIcon,
-      staroutline: true,
+      staroutline: false,
+      starhalf: false,
     },
 
     {
@@ -108,7 +111,8 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
       originalPrice: "₦5,500",
       bestSeller: false,
       starfilled: StarFilledIcon,
-      staroutline: true,
+      starhalf: true,
+      staroutline: false,
     },
 
     {
@@ -121,7 +125,8 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
       originalPrice: "₦4,500",
       bestSeller: false,
       starfilled: StarFilledIcon,
-      staroutline: true,
+      starhalf: true,
+      staroutline: false,
     },
   ];
 

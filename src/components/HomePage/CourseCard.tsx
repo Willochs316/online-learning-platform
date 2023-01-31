@@ -21,7 +21,14 @@ import {
   CourseCardRateNum,
 } from "./homePage.styled";
 import { Typography } from "@mui/material";
+import starfilled from "../../assets/svgs/star-filled-rate.svg";
 import staroutline from "../../assets/svgs/star-rate-rating-outline.svg";
+import starhalf from "../../assets/svgs/star-half-rate.svg";
+import {
+  SignalCellularNull,
+  StarOutline,
+  StarOutlineOutlined,
+} from "@mui/icons-material";
 
 interface CourseCardCarousel {
   courseCard: any[];
@@ -78,15 +85,30 @@ export const CourseCardCarousel: React.FunctionComponent<CourseCardCarousel> = (
                   <CourseCardRateNum>{card.rate}</CourseCardRateNum>
 
                   <StarIconContent>
-                    <RateIcon src={card.starfilled} alt="" />
-                    <RateIcon src={card.starfilled} alt="" />
-                    <RateIcon src={card.starfilled} alt="" />
-                    <RateIcon src={card.starfilled} alt="" />
-
                     {card.staroutline ? (
-                      <RateIcon src={staroutline} alt="" />
+                      <>
+                        <RateIcon src={starfilled} alt="" />
+                        <RateIcon src={starfilled} alt="" />
+                        <RateIcon src={starfilled} alt="" />
+                        <RateIcon src={starfilled} alt="" />
+                        <RateIcon src={starhalf} alt="" />
+                      </>
+                    ) : card.starhalf ? (
+                      <>
+                        <RateIcon src={starfilled} alt="" />
+                        <RateIcon src={starfilled} alt="" />
+                        <RateIcon src={starfilled} alt="" />
+                        <RateIcon src={starfilled} alt="" />
+                        <RateIcon src={staroutline} alt="" />
+                      </>
                     ) : (
-                      <RateIcon src={card.starhalf} alt="" />
+                      <>
+                        <RateIcon src={starfilled} alt="" />
+                        <RateIcon src={starfilled} alt="" />
+                        <RateIcon src={starfilled} alt="" />
+                        <RateIcon src={starhalf} alt="" />
+                        <RateIcon src={staroutline} alt="" />
+                      </>
                     )}
                   </StarIconContent>
                 </StarRatingContainer>
