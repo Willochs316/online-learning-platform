@@ -206,7 +206,7 @@ export const CourseCardHeaderTitle = styled("h2")({
   letterSpacing: "0.5px",
 });
 
-export const CourseDiscoveryContent = styled("div")({
+export const ViewedCourseContainer = styled("div")({
   display: "flex",
   flexDirection: "column",
   alignItems: "flex-start",
@@ -220,7 +220,7 @@ export const CourseDiscoveryContent = styled("div")({
   width: "100%",
 });
 
-export const DiscoveryCourseParagraph = styled("div")({
+export const ViewedCourseHeader = styled("div")({
   display: "flex",
   alignItems: "center",
   justifyContent: "flex-start",
@@ -234,39 +234,36 @@ export const DiscoveryCourseParagraph = styled("div")({
   width: "100%",
 });
 
-export const CourseViewedTitle = styled("div")({
+export const CourseViewedTitle = styled("h2")({
   display: "flex",
   flexDirection: "column",
   alignItems: "baseline",
-  fontFamily:
-    "udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+  width: "100%",
   color: "#1c1d1f",
   margin: 0,
   padding: 0,
+  fontFamily:
+    "udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
   fontWeight: 700,
   lineHeight: 1.2,
-  letterSpacing: "-0.2px",
+  letterSpacing: "-.02rem",
   fontSize: "24px",
-  maxWidth: "800",
-  width: "100%",
+  maxWidth: "800px",
+  height: 57.59,
 });
 
 export const CourseViewAnchorTag = styled("a")({
   fontFamily:
     "udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
   fontWeight: 700,
-  lineHeight: 1.2,
-  letterSpacing: "-0.2",
+  lineheight: 1.2,
+  letterSpacing: "-.02rem",
   fontSize: "24px",
   margin: 0,
   padding: 0,
   color: "#5624d0",
   textDecoration: "none",
   cursor: "pointer",
-});
-
-export const Span = styled("div")({
-  display: "inline-block",
 });
 
 export const CourseCarouselContainer = styled("div")({
@@ -527,7 +524,6 @@ export const StarRatingContainer = styled("span")({
   display: "flex",
   alignItems: "center",
   // width: "100%",
-
   width: 94.17,
 });
 
@@ -653,4 +649,31 @@ export const CourseBadgeContainer = styled("div")({
   margin: "8px 0 4px",
   gap: "4px 8px",
   width: "100%",
+});
+
+export const RecommendedCourseContainer = styled("div")({
+  fontFamily:
+    "udemy sans,sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "16px",
+  color: "#1c1d1f",
+  margin: 0,
+  padding: 0,
+  marginTop: "48px",
+  width: "100%",
+  position: "relative",
+});
+
+export const RecommendedUnitTitleContainer = styled("h2")({
+  color: "#1c1d1f",
+  margin: 0,
+  padding: 0,
+  fontFamily:
+    "udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
+  fontWeight: 700,
+  lineHeight: 1.2,
+  letterSpacing: "-.02rem",
+  fontSize: "24px",
+  maxWidth: "800px",
 });

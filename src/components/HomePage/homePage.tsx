@@ -2,7 +2,6 @@ import * as React from "react";
 import {
   TopBillBoardCarousel,
   TopCarouselItems,
-  CourseDiscoveryContent,
   CourseUnitGridCarousel,
   CourseCarouselBackButton,
   CourseCarouselForwardButton,
@@ -11,38 +10,32 @@ import {
   AppHomeDataContent,
   CourseViewAnchorTag,
   CourseViewedTitle,
-  DiscoveryCourseParagraph,
   CourseCarouselContainer,
-  Span,
   AppHomePageWrapper,
   BillBoardBannerContainer,
   BillboardBackButton,
   BillboardForwardButton,
+  RecommendedCourseContainer,
+  RecommendedUnitTitleContainer,
+  ViewedCourseContainer,
+  ViewedCourseHeader,
 } from "./homePage.styled";
 import ArrowBackIosNewOutlinedIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
-import WebRtc from "../../assets/images/web-rtc.jpeg";
-import Ather from "../../assets/images/ather.jpeg";
-import OakAcademy from "../../assets/images/oak-academy.jpeg";
-import RustyZone from "../../assets/images/rusty-zone.jpeg";
-import Rusty from "../../assets/images/rusty.jpeg";
-import Alawi from "../../assets/images/alawi.jpeg";
-import Mohan from "../../assets/images/mohan.jpeg";
-import Chen from "../../assets/images/chen.jpeg";
-import Wizard from "../../assets/images/wizard-courses.jpeg";
-import Bakery from "../../assets/images/skillbakery.jpeg";
-import Skup from "../../assets/images/antoni.jpeg";
 import { Typography } from "@mui/material";
 import { BillboardCarousel } from "./billboardCarousel";
-import firstBillboard from "../../assets/images/first-billboard-banner.jpg";
-import secondBillboard from "../../assets/images/second-billboard-banner.jpg";
+import firstBillboard from "/src/assets/images/first-billboard-banner.jpg";
+import secondBillboard from "/src/assets/images/second-billboard-banner.jpg";
 import { CourseCardCarousel } from "./CourseCard";
-import StarFilledIcon from "../../assets/svgs/star-filled-rate.svg";
 
-interface HomeProps {}
+interface HomeProps {
+  courses: any[];
+}
 
 export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
   const [currentBillboard, setCurrentBillboard] = React.useState(0);
+
+  const { courses } = props;
 
   const images = [
     {
@@ -59,162 +52,6 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
       content:
         "Skills for your present (and your future). Get started with us.",
       img: `${secondBillboard}`,
-    },
-  ];
-
-  const courseCard = [
-    {
-      img: `${WebRtc}`,
-      title: "Discord Clone - Learn MERN Stack with WebRTC and...",
-      instructor: "Marek Gryszkiewicz",
-      rate: "4.6",
-      rateNum: "(124)",
-      currentPrice: "₦3,900",
-      originalPrice: "₦17,500",
-      bestSeller: true,
-      starfilled: StarFilledIcon,
-      starhalf: true,
-      staroutline: true,
-    },
-
-    {
-      img: `${OakAcademy}`,
-      title: "React Native From Scratch with Hooks and Context",
-      instructor: "Oak Academy",
-      rate: "4.5",
-      rateNum: "(33)",
-      currentPrice: "₦3,900",
-      originalPrice: "",
-      bestSeller: false,
-      starfilled: StarFilledIcon,
-      starhalf: true,
-      staroutline: true,
-    },
-
-    {
-      img: `${Ather}`,
-      title: "React Native Chat App with Firebase - Firestore Course 2020",
-      instructor: "Usaid Ather",
-      rate: "3.6",
-      rateNum: "(56)",
-      currentPrice: "₦3,200",
-      originalPrice: "₦4,500",
-      bestSeller: false,
-      starfilled: StarFilledIcon,
-      staroutline: false,
-      starhalf: false,
-    },
-
-    {
-      img: `${RustyZone}`,
-      title: "Build the original Instagram with React Native & Firebase",
-      instructor: "Rusty Zone",
-      rate: "3.9",
-      rateNum: "(195)",
-      currentPrice: "₦3,900",
-      originalPrice: "₦5,500",
-      bestSeller: false,
-      starfilled: StarFilledIcon,
-      starhalf: true,
-      staroutline: false,
-    },
-
-    {
-      img: `${Rusty}`,
-      title: "Build your first app with React Native",
-      instructor: "Rusty Zone",
-      rate: "4.1",
-      rateNum: "(44)",
-      currentPrice: "₦3,200",
-      originalPrice: "₦4,500",
-      bestSeller: false,
-      starfilled: StarFilledIcon,
-      starhalf: true,
-      staroutline: false,
-    },
-
-    {
-      img: `${Alawi}`,
-      title: "Build Instagram Clone Using HTML & CSS",
-      instructor: "Mustafa Alawi",
-      rate: "3.6",
-      rateNum: "(5)",
-      currentPrice: "₦3,500",
-      originalPrice: "₦4,500",
-      bestSeller: false,
-      starfilled: StarFilledIcon,
-      starhalf: false,
-      staroutline: false,
-    },
-
-    {
-      img: `${Mohan}`,
-      title: "React Native - First Steps",
-      instructor: "Mehul Mohan",
-      rate: "4.4",
-      rateNum: "(26)",
-      currentPrice: "₦3,500",
-      originalPrice: "₦4,500",
-      bestSeller: false,
-      starfilled: StarFilledIcon,
-      starhalf: false,
-      staroutline: true,
-    },
-
-    {
-      img: `${Chen}`,
-      title: "React Native Expo for multiplatform mobile app...",
-      instructor: "Kim Chen",
-      rate: "4.2",
-      rateNum: "(467)",
-      currentPrice: "₦3,500",
-      originalPrice: "₦13,500",
-      bestSeller: false,
-      starfilled: StarFilledIcon,
-      starhalf: true,
-      staroutline: false,
-    },
-
-    {
-      img: `${Wizard}`,
-      title: "React Native with Redux, Firebase, GCP and more.",
-      instructor: "Wizard Courses",
-      rate: "3.2",
-      rateNum: "(11)",
-      currentPrice: "₦3,900",
-      originalPrice: "₦5,500",
-      bestSeller: false,
-      starfilled: StarFilledIcon,
-      starhalf: true,
-      staroutline: false,
-    },
-
-    {
-      img: `${Bakery}`,
-      title: "React Native: Build Native Mobile Applications",
-      instructor: "SkillBakery Studio",
-      rate: "3.4",
-      rateNum: "(23)",
-      currentPrice: "₦4,500",
-      originalPrice: "₦8,500",
-      bestSeller: false,
-      starfilled: StarFilledIcon,
-      starhalf: false,
-      staroutline: false,
-    },
-
-    {
-      img: `${Skup}`,
-      title: "React Native bootcamp - Build an Instagram Clone w/Firebase",
-      instructor: "Antonio Skup",
-      rate: "3.5",
-      rateNum: "(204)",
-      currentPrice: "₦3,500",
-      originalPrice: "₦13,900",
-      bestSeller: false,
-      starfilled: StarFilledIcon,
-      starhalf: false,
-      staroutline: false,
     },
   ];
 
@@ -277,53 +114,28 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
             What to learn next
           </Typography>
 
-          <CourseDiscoveryContent>
-            <DiscoveryCourseParagraph>
+          <ViewedCourseContainer>
+            <ViewedCourseHeader>
               <CourseViewedTitle>
                 <div>
-                  Because you viewed "
-                  <CourseViewAnchorTag>
-                    <Span>
-                      <Typography
-                        variant="body2"
-                        sx={{
-                          color: "secondary.contrastText",
-                          ":hover": {
-                            color: "#401B9C",
-                          },
-                        }}
-                      >
-                        How to Build an Instagram Clone w/ React Native
-                        {/* Create a Netflix clone from Scratch: JavaScript */}
-                      </Typography>
-                    </Span>
+                  Because you viewed{" "}
+                  <CourseViewAnchorTag
+                    sx={{
+                      color: "secondary.contrastText",
+                      ":hover": {
+                        color: "#401B9C",
+                      },
+                    }}
+                  >
+                    "How to Build an Instagram Clone w/ React Native & Firebase"
                   </CourseViewAnchorTag>
-                </div>
-
-                <div>
-                  <CourseViewAnchorTag>
-                    <Span>
-                      <Typography
-                        variant="body2"
-                        sx={{
-                          color: "secondary.contrastText",
-                          ":hover": {
-                            color: "#401B9C",
-                          },
-                        }}
-                      >
-                        & Firebase
-                      </Typography>
-                    </Span>
-                  </CourseViewAnchorTag>
-                  "
                 </div>
               </CourseViewedTitle>
-            </DiscoveryCourseParagraph>
+            </ViewedCourseHeader>
 
             <CourseCarouselContainer>
               <CourseUnitGridCarousel>
-                <CourseCardCarousel courseCard={courseCard} />
+                <CourseCardCarousel courses={courses} />
               </CourseUnitGridCarousel>
 
               <CourseCarouselBackButton>
@@ -334,7 +146,29 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
                 <ArrowForwardIosOutlinedIcon />
               </CourseCarouselForwardButton>
             </CourseCarouselContainer>
-          </CourseDiscoveryContent>
+          </ViewedCourseContainer>
+
+          {/* <RecommendedCourseContainer>
+            <DiscoveryCourseParagraph>
+              <RecommendedUnitTitleContainer>
+              Recommended for you
+              </RecommendedUnitTitleContainer>
+            </DiscoveryCourseParagraph>
+
+            <CourseCarouselContainer>
+              <CourseUnitGridCarousel>
+                <CourseCardCarousel courses={courses} />
+              </CourseUnitGridCarousel>
+
+              <CourseCarouselBackButton>
+                <ArrowBackIosNewOutlinedIcon />
+              </CourseCarouselBackButton>
+
+              <CourseCarouselForwardButton>
+                <ArrowForwardIosOutlinedIcon />
+              </CourseCarouselForwardButton>
+            </CourseCarouselContainer>
+          </RecommendedCourseContainer> */}
         </CourseDiscoveryContainer>
       </AppHomeDataContent>
     </AppHomePageWrapper>

@@ -26,21 +26,21 @@ import staroutline from "../../assets/svgs/star-rate-rating-outline.svg";
 import starhalf from "../../assets/svgs/star-half-rate.svg";
 
 interface CourseCardCarousel {
-  courseCard: any[];
+  courses: any[];
 }
 
 export const CourseCardCarousel: React.FunctionComponent<CourseCardCarousel> = (
   props
 ) => {
-  const { courseCard } = props;
+  const { courses } = props;
 
   return (
     <>
-      {courseCard.map((card, index) => (
-        <CourseCarouselScrollItem>
+      {courses.map((course, index) => (
+        <CourseCarouselScrollItem key={index}>
           <ScrollItemContainer>
             <CourseCardImageContainer>
-              <CourseCardImage src={card.img} alt="Course Card Image" />
+              <CourseCardImage src={course.img} alt="Course Card Image" />
             </CourseCardImageContainer>
 
             <CourseCardMainContent>
@@ -52,7 +52,7 @@ export const CourseCardCarousel: React.FunctionComponent<CourseCardCarousel> = (
                     },
                   }}
                 >
-                  {card.title}
+                  {course.title}
                 </CourseTitleAnchorTag>
               </CourseTitleContainer>
 
@@ -71,16 +71,16 @@ export const CourseCardCarousel: React.FunctionComponent<CourseCardCarousel> = (
                     whiteSpace: "normal",
                   }}
                 >
-                  {card.instructor}
+                  {course.instructor}
                 </Typography>
               </CourseInstructorContainer>
 
               <CourseCardStarRate>
                 <StarRatingContainer>
-                  <CourseCardRateNum>{card.rate}</CourseCardRateNum>
+                  <CourseCardRateNum>{course.rate}</CourseCardRateNum>
 
                   <StarIconContent>
-                    {card.staroutline ? (
+                    {course.staroutline ? (
                       <>
                         <RateIcon src={starfilled} alt="" />
                         <RateIcon src={starfilled} alt="" />
@@ -88,7 +88,7 @@ export const CourseCardCarousel: React.FunctionComponent<CourseCardCarousel> = (
                         <RateIcon src={starfilled} alt="" />
                         <RateIcon src={starhalf} alt="" />
                       </>
-                    ) : card.starhalf ? (
+                    ) : course.starhalf ? (
                       <>
                         <RateIcon src={starfilled} alt="" />
                         <RateIcon src={starfilled} alt="" />
@@ -108,7 +108,7 @@ export const CourseCardCarousel: React.FunctionComponent<CourseCardCarousel> = (
                   </StarIconContent>
                 </StarRatingContainer>
 
-                <RateNumContent>{card.rateNum}</RateNumContent>
+                <RateNumContent>{course.rateNum}</RateNumContent>
               </CourseCardStarRate>
 
               <PriceTextContainer>
@@ -123,7 +123,7 @@ export const CourseCardCarousel: React.FunctionComponent<CourseCardCarousel> = (
                       padding: 0,
                     }}
                   >
-                    {card.currentPrice}
+                    {course.currentPrice}
                   </Typography>
                 </CurrentPriceContainer>
 
@@ -141,14 +141,14 @@ export const CourseCardCarousel: React.FunctionComponent<CourseCardCarousel> = (
                           padding: 0,
                         }}
                       >
-                        {card.originalPrice}
+                        {course.originalPrice}
                       </Typography>
                     </s>
                   </OriginalPriceText>
                 </OriginalPriceContainer>
               </PriceTextContainer>
 
-              {card.bestSeller ? (
+              {course.bestSeller ? (
                 <CourseBadgeContainer>
                   <Typography
                     sx={{
@@ -165,7 +165,7 @@ export const CourseCardCarousel: React.FunctionComponent<CourseCardCarousel> = (
                       color: "#3d3c0a",
                     }}
                   >
-                    Bestseller
+                    {course.bestSeller}
                   </Typography>
                 </CourseBadgeContainer>
               ) : null}
