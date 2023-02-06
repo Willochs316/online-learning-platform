@@ -220,6 +220,20 @@ export const ViewedCourseContainer = styled("div")({
   width: "100%",
 });
 
+export const ViewedUnitCourseDetails = styled("div")({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "flex-start",
+  justifyContent: "center",
+  fontWeight: 400,
+  lineHeight: 1.4,
+  fontSize: "16px",
+  color: "#1c1d1f",
+  margin: 0,
+  padding: 0,
+  width: "100%",
+});
+
 export const ViewedCourseHeader = styled("div")({
   display: "flex",
   alignItems: "center",
@@ -249,7 +263,6 @@ export const CourseViewedTitle = styled("h2")({
   letterSpacing: "-.02rem",
   fontSize: "24px",
   maxWidth: "800px",
-  height: 57.59,
 });
 
 export const CourseViewAnchorTag = styled("a")({
@@ -663,17 +676,4 @@ export const RecommendedCourseContainer = styled("div")({
   marginTop: "48px",
   width: "100%",
   position: "relative",
-});
-
-export const RecommendedUnitTitleContainer = styled("h2")({
-  color: "#1c1d1f",
-  margin: 0,
-  padding: 0,
-  fontFamily:
-    "udemy sans,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol",
-  fontWeight: 700,
-  lineHeight: 1.2,
-  letterSpacing: "-.02rem",
-  fontSize: "24px",
-  maxWidth: "800px",
 });

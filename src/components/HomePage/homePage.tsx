@@ -16,9 +16,9 @@ import {
   BillboardBackButton,
   BillboardForwardButton,
   RecommendedCourseContainer,
-  RecommendedUnitTitleContainer,
   ViewedCourseContainer,
   ViewedCourseHeader,
+  ViewedUnitCourseDetails,
 } from "./homePage.styled";
 import ArrowBackIosNewOutlinedIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
@@ -26,7 +26,7 @@ import { Typography } from "@mui/material";
 import { BillboardCarousel } from "./billboardCarousel";
 import firstBillboard from "/src/assets/images/first-billboard-banner.jpg";
 import secondBillboard from "/src/assets/images/second-billboard-banner.jpg";
-import { CourseCardCarousel } from "./CourseCard";
+import { CourseUnitCard } from "./CourseCard";
 
 interface HomeProps {
   courses: any[];
@@ -115,62 +115,70 @@ export const HomePage: React.FunctionComponent<HomeProps> = (props) => {
           </Typography>
 
           <ViewedCourseContainer>
-            <ViewedCourseHeader>
-              <CourseViewedTitle>
-                <div>
-                  Because you viewed{" "}
-                  <CourseViewAnchorTag
-                    sx={{
-                      color: "secondary.contrastText",
-                      ":hover": {
-                        color: "#401B9C",
-                      },
-                    }}
-                  >
-                    "How to Build an Instagram Clone w/ React Native & Firebase"
-                  </CourseViewAnchorTag>
-                </div>
-              </CourseViewedTitle>
-            </ViewedCourseHeader>
+            <ViewedUnitCourseDetails>
+              <ViewedCourseHeader>
+                <CourseViewedTitle>
+                  <div>
+                    Because you viewed{" "}
+                    <CourseViewAnchorTag
+                      sx={{
+                        color: "secondary.contrastText",
+                        ":hover": {
+                          color: "#401B9C",
+                        },
+                      }}
+                    >
+                      "How to Build an Instagram Clone w/ React Native &
+                      Firebase"
+                    </CourseViewAnchorTag>
+                  </div>
+                </CourseViewedTitle>
+              </ViewedCourseHeader>
 
-            <CourseCarouselContainer>
-              <CourseUnitGridCarousel>
-                <CourseCardCarousel courses={courses} />
-              </CourseUnitGridCarousel>
+              <CourseCarouselContainer>
+                <CourseUnitGridCarousel>
+                  {courses.slice(0, 12).map((course, index) => (
+                    <CourseUnitCard course={course} key={index} />
+                  ))}
+                </CourseUnitGridCarousel>
 
-              <CourseCarouselBackButton>
-                <ArrowBackIosNewOutlinedIcon />
-              </CourseCarouselBackButton>
+                <CourseCarouselBackButton>
+                  <ArrowBackIosNewOutlinedIcon />
+                </CourseCarouselBackButton>
 
-              <CourseCarouselForwardButton>
-                <ArrowForwardIosOutlinedIcon />
-              </CourseCarouselForwardButton>
-            </CourseCarouselContainer>
+                <CourseCarouselForwardButton>
+                  <ArrowForwardIosOutlinedIcon />
+                </CourseCarouselForwardButton>
+              </CourseCarouselContainer>
+            </ViewedUnitCourseDetails>
           </ViewedCourseContainer>
 
-          {/* <RecommendedCourseContainer>
-            <DiscoveryCourseParagraph>
-              <RecommendedUnitTitleContainer>
-              Recommended for you
-              </RecommendedUnitTitleContainer>
-            </DiscoveryCourseParagraph>
+          <RecommendedCourseContainer>
+            <ViewedUnitCourseDetails>
+              <ViewedCourseHeader>
+                <CourseViewedTitle>Recommended for you</CourseViewedTitle>
+              </ViewedCourseHeader>
 
-            <CourseCarouselContainer>
-              <CourseUnitGridCarousel>
-                <CourseCardCarousel courses={courses} />
-              </CourseUnitGridCarousel>
+              <CourseCarouselContainer>
+                <CourseUnitGridCarousel>
+                  {courses.slice(13, 26).map((course, index) => (
+                    <CourseUnitCard course={course} key={index} />
+                  ))}
+                </CourseUnitGridCarousel>
 
-              <CourseCarouselBackButton>
-                <ArrowBackIosNewOutlinedIcon />
-              </CourseCarouselBackButton>
+                <CourseCarouselBackButton>
+                  <ArrowBackIosNewOutlinedIcon />
+                </CourseCarouselBackButton>
 
-              <CourseCarouselForwardButton>
-                <ArrowForwardIosOutlinedIcon />
-              </CourseCarouselForwardButton>
-            </CourseCarouselContainer>
-          </RecommendedCourseContainer> */}
+                <CourseCarouselForwardButton>
+                  <ArrowForwardIosOutlinedIcon />
+                </CourseCarouselForwardButton>
+              </CourseCarouselContainer>
+            </ViewedUnitCourseDetails>
+          </RecommendedCourseContainer>
         </CourseDiscoveryContainer>
       </AppHomeDataContent>
     </AppHomePageWrapper>
   );
 };
+
